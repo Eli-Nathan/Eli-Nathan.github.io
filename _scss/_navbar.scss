@@ -1,0 +1,14 @@
+nav.navbar {
+  background: #fff;
+  .navbar-toggler {
+    background:#eee;
+    color:#333333;
+  }
+  ul {
+    li {
+      a.nav-link {
+        color: $text;
+      }
+    }
+  }
+}

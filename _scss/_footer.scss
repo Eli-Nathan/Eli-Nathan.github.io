@@ -1,0 +1,10 @@
+.footer {
+  background: #eee;
+  &__content {
+    padding: $v-rhythm * 5 0;
+  }
+  &__bottom {
+    background: #e6e6e6;
+    padding-top: $v-rhythm * 2;
+  }
+}

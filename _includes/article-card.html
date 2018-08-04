@@ -1,0 +1,15 @@
+<a class="block block--news" href="{{ post.url }}">
+  {% if post.image %}
+    <img src="/assets/images/content/news/{{ post.image }}" alt="" class="articles__image articles__image--{{ post.tags[0] }}" />
+  {% else %}
+    <img src="/assets/images/content/news/budget.jpg" alt="" class="articles__image articles__image--{{ post.tags[0] }}" />
+  {% endif %}
+
+  <div class="block__content block__content--no-padding">
+    <h2 class="block__title h3 articles__heading">{{ post.article_title }}</h2>
+    <p class="block__date">
+      <span class="clock-icon"></span>
+      {{ post.date | date: "%-d %B %Y" }}
+    </p>
+  </div>
+</a>

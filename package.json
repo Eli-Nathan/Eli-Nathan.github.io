@@ -1,0 +1,56 @@
+{
+  "name": "bootstrap",
+  "version": "1.0.0",
+  "description": "Jeykll project to maintain all the landing pages and assets. Use Ruby 2.3.0.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "setup": "npm install -g gulp-cli && npm install && gem install bundler && bundle install",
+    "dev": "gulp server",
+    "force": "gulp javascripts --force && gulp stylesheets --force && jekyll build",
+    "upgrade": "npm install -g npm-check-updates && npm-check-updates -u && npm install && gem install bundler && bundle update",
+    "crunch": "gulp optimize_images"
+  },
+  "author": "Eli Nathan",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "*",
+    "browserify": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-buffer": "0.0.2",
+    "gulp-changed": "*",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-debug": "*",
+    "gulp-if": "*",
+    "gulp-imagemin": "*",
+    "gulp-include": "*",
+    "gulp-newer": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-svgmin": "*",
+    "gulp-tap": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "jquery": "^3.3.1",
+    "run-sequence": "*",
+    "vinyl-buffer": "*",
+    "yargs": "*"
+  },
+  "keywords": [
+    "jekyll",
+    "gulp",
+    "sass",
+    "browsersync"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "gulp-mamp": "0.0.5",
+    "popper.js": "^1.14.1",
+    "server": "^1.0.18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Eli-Nathan/bootstrap-npm.git"
+  }
+}
