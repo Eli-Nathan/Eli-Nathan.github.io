@@ -32,7 +32,7 @@ gulp.task('jekyll-build', function(done) {
 gulp.task('dev-server', function() {
   return browserSync({
     server: {
-      baseDir: '_site'
+      baseDir: 'docs/'
     }
   });
 });
@@ -40,7 +40,7 @@ gulp.task('dev-server', function() {
 gulp.task('share', function() {
   return browserSync.init({
     server: {
-      baseDir: "_site"
+      baseDir: "docs"
     },
     ghostMode: false
   });
@@ -114,7 +114,7 @@ gulp.task('watch', function() {
   gulp.watch('./_scss/**/*.scss', ['stylesheets']);
   gulp.watch('./node_modules/bootstrap/scss/bootstrap.scss', ['stylesheets']);
   gulp.watch('./_scripts/**/*.js', ['javascripts']);
-  gulp.watch(['./_site/**/*']).on("change", reload);
+  gulp.watch(['./docs/**/*']).on("change", reload);
 });
 
 gulp.task('server', function(callback) {
