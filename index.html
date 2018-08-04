@@ -9,12 +9,12 @@ current: home
     <div class="row d-flex">
       <div class="col-md-6 align-self-center me-intro">
         <div class="row d-flex">
-          <div class="col-3 align-self-center text-center me-intro__image">
+          <div class="col-sm-3 align-self-center text-center me-intro__image">
             <img src="/assets/images/me-round.png" alt="Small image of me" />
           </div>
-          <div class="col-9 align-self-center me-intro__text">
+          <div class="col-sm-9 align-self-center me-intro__text">
             <h1>I'm Eli,</h1>
-            <p>A freelance web designer & developer based here in Glasgow.</p>
+            <p>A freelance web designer & developer <br>based here in Glasgow.</p>
             <!-- Encoded link to stop spam -->
             <script type="text/javascript">
               //<![CDATA[
@@ -40,9 +40,77 @@ current: home
           </div>
         </div>
       </div>
-      <div class="col-md-6 align-self-center">
+      <div class="about-me col-md-6 align-self-end align-items-end">
         <p>I’ve been building websites for around 4 years now after changing career from being a chef in some of Scotland’s most high profile establishments.</p>
+        <p><a href="#" data-toggle="modal" data-target="#tech-stack">Click here</a> to see some of the technologies I like to work with.</p>
       </div>
     </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="tech-stack" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">My tech stack</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body tech-stack">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <h6>Technologies</h6>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li><i class="fa fa-star fa-star--legendary" aria-hidden="true"></i> &nbsp; HTML</li>
+                <li><i class="fa fa-star fa-star--legendary" aria-hidden="true"></i> &nbsp; CSS/SCSS</li>
+                <li><i class="fa fa-star fa-star--legendary" aria-hidden="true"></i> &nbsp; JavaScript</li>
+                <li><i class="fa fa-star fa-star--legendary" aria-hidden="true"></i> &nbsp; jQuery</li>
+                <li><i class="fa fa-star fa-star--good" aria-hidden="true"></i> &nbsp; Command line</li>
+                <li><i class="fa fa-star fa-star--good" aria-hidden="true"></i> &nbsp; Git</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li><i class="fa fa-star fa-star--good" aria-hidden="true"></i> &nbsp; Node</li>
+                <li><i class="fa fa-star fa-star--good" aria-hidden="true"></i> &nbsp; Gulp</li>
+                <li><i class="fa fa-star fa-star--good" aria-hidden="true"></i> &nbsp; Grunt</li>
+                <li><i class="fa fa-star fa-star--good" aria-hidden="true"></i> &nbsp; MySQL</li>
+                <li><i class="fa fa-star fa-star--learning" aria-hidden="true"></i> &nbsp; PHP</li>
+                <li><i class="fa fa-star fa-star--learning" aria-hidden="true"></i> &nbsp; React JS</li>
+              </ul>
+            </div>
+            <div class="col-md-12">
+              <h6>Software</h6>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li>Sketch</li>
+                <li>Illustrator</li>
+                <li>Photoshop</li>
+                <li>Atom</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li>Google Analytics</li>
+                <li>GitKraken</li>
+                <li>Tower</li>
+                <li>Filezilla</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
   </div>
 </div>
