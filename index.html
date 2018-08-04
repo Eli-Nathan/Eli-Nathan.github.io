@@ -48,69 +48,34 @@ current: home
   </div>
 </div>
 
-
-<!-- Modal -->
-<div class="modal fade" id="tech-stack" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">My tech stack</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+<div class="home-pf">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 home-pf__heading">
+        <h3>My work</h3>
       </div>
-      <div class="modal-body tech-stack">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-              <h6>Technologies</h6>
-            </div>
-            <div class="col-md-6">
-              <ul>
-                <li><i class="fa fa-star fa-star--legendary" aria-hidden="true"></i> &nbsp; HTML</li>
-                <li><i class="fa fa-star fa-star--legendary" aria-hidden="true"></i> &nbsp; CSS/SCSS</li>
-                <li><i class="fa fa-star fa-star--legendary" aria-hidden="true"></i> &nbsp; JavaScript</li>
-                <li><i class="fa fa-star fa-star--legendary" aria-hidden="true"></i> &nbsp; jQuery</li>
-                <li><i class="fa fa-star fa-star--good" aria-hidden="true"></i> &nbsp; Command line</li>
-                <li><i class="fa fa-star fa-star--good" aria-hidden="true"></i> &nbsp; Git</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <ul>
-                <li><i class="fa fa-star fa-star--good" aria-hidden="true"></i> &nbsp; Node</li>
-                <li><i class="fa fa-star fa-star--good" aria-hidden="true"></i> &nbsp; Gulp</li>
-                <li><i class="fa fa-star fa-star--good" aria-hidden="true"></i> &nbsp; Grunt</li>
-                <li><i class="fa fa-star fa-star--good" aria-hidden="true"></i> &nbsp; MySQL</li>
-                <li><i class="fa fa-star fa-star--learning" aria-hidden="true"></i> &nbsp; PHP</li>
-                <li><i class="fa fa-star fa-star--learning" aria-hidden="true"></i> &nbsp; React JS</li>
-              </ul>
-            </div>
-            <div class="col-md-12">
-              <h6>Software</h6>
-            </div>
-            <div class="col-md-6">
-              <ul>
-                <li>Sketch</li>
-                <li>Illustrator</li>
-                <li>Photoshop</li>
-                <li>Atom</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <ul>
-                <li>Google Analytics</li>
-                <li>GitKraken</li>
-                <li>Tower</li>
-                <li>Filezilla</li>
-              </ul>
-            </div>
+      <div class="col-sm-12 home-pf__cards text-center">
+        <div class="col-md-4">
+          <div class="work-card">
+              <img src="{{ site.baseurl }}/assets/images/back-country-guide.png" alt="Back country guide logo" class="">
+              <h4></
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-card">
+            <img src="{{ site.baseurl }}/assets/images/jake.png" alt="Jake Eaton" class="">
+            <h4></
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-card">
+            <img src="{{ site.baseurl }}/assets/images/login-signup.png" alt="Login form image" class="">
+            <h4></h4>
           </div>
         </div>
       </div>
+      <div class="col-sm-12 text-center"><a href="{{ site.baseurl }}/my-work" class="btn btn--default">View more</a></div>
     </div>
-    <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div> -->
   </div>
-</div>
+
+{% include tech-stack.html %}

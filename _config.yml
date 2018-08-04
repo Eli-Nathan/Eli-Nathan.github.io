@@ -4,8 +4,8 @@ highlighter: null # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json",  "README.md", "_scripts", "_scss", "gemfile", "Gemfile.lock"]
 url: "https://github.com/Ely-Nathan/bootstrap-npm"
 destination: docs
-# baseurl: /new-site
-baseurl: ""
+baseurl: /new-site
+# baseurl: ""
 collections:
   posts:
     output:   true
