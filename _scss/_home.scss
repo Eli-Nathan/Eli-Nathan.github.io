@@ -1,0 +1,17 @@
+.intro-section {
+  padding: 60px 0;
+
+  .me-intro {
+    &__image {
+      img {
+        width: 100%;
+      }
+    }
+
+    &__text {
+      h1 {
+        font-size: 30px;
+      }
+    }
+  }
+}

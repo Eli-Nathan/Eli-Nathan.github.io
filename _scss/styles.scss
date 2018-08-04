@@ -1,5 +1,12 @@
+// Bootstrap
 @import 'bootstrap/bootstrap.scss';
+// Variables
 @import '_var.scss';
+// Main styles
 @import '_main.scss';
+// Nav & Footer
 @import '_navbar.scss';
 @import '_footer.scss';
+
+// Pages
+@import '_home.scss';
