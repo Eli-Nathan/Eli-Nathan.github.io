@@ -15,6 +15,7 @@
   "devDependencies": {
     "browser-sync": "*",
     "browserify": "*",
+    "eslint-config-airbnb-relaxed": "^0.2.0",
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-buffer": "0.0.2",
