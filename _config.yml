@@ -13,5 +13,4 @@ collections:
   posts:
     output:   true
 
-# permalink: /new-site/blog/:title/
 permalink: /blog/:title/
