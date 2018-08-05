@@ -1,15 +1,12 @@
-<div class="container content-container content-container--border">
-  <h2 class="block__header center">The latest</h2>
-  <div class="row">
-    {% for post in site.posts limit:3 %}
-      <div class="col-xs-12 col-sm-4 col-md-4">
-        {% include article-card.html %}
-      </div>
-    {% endfor %}
-  </div>
-  <div class="row center">
-    <div class="col-md-12">
-      <a href="/news" class="activa-btn">View all news</a>
-    </div>
+<div class="col-md-4">
+  <div class="news-card">
+    {% if post.external_url %}
+    <a href="{{ post.external_url }}" target="_blank" class="news-card__inner">
+    {% else %}
+    <a href="{{ post.url }}" class="news-card__inner">
+      {% endif %}
+        <img src="{{ site.baseurl }}/assets/images/{{ post.image }}"  alt="Article thumbnail" class="img-fluid">
+        <h4>{{ post.article_title }}</h4>
+      </a>
   </div>
 </div>
