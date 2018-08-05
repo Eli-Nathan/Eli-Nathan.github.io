@@ -125,7 +125,7 @@
 }
 
 .home-news {
-  padding: $spacer*3 0;
+  padding-bottom: $spacer*2 0;
 
   &__heading {
     h3 {
@@ -135,6 +135,7 @@
   }
 
   .news-card {
+    padding-bottom: $spacer*1.5;
     img {
       padding-bottom: $spacer*.5;
     }

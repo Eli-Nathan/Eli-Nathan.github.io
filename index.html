@@ -75,9 +75,9 @@ current: home
         </div>
       </div>
       <div class="col-sm-12">
-        {% for post in site.posts limit:3 %}
-          {% include latest-news.html %}
-        {% endfor %}
+        <div class="row">
+          {% for post in site.posts limit:3 %} {% include latest-news.html %} {% endfor %}
+        </div>
       </div>
     </div>
   </div>
