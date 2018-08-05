@@ -1,0 +1,55 @@
+.article {
+  &--post {
+    padding-top: $spacer*2;
+    padding-bottom: $spacer;
+    @include media-breakpoint-up(sm) {
+      padding-top: $spacer*3;
+      padding-bottom: $spacer;
+    }
+
+    img {
+      width:100%;
+      height: auto;
+      padding-bottom: $spacer*1.5;
+    }
+
+    h1,
+    h2 {
+      text-transform: uppercase;
+      color: $red;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 20px;
+      color: $red;
+    }
+    h4 {
+      font-size: 18px;
+    }
+
+    i.fa {
+      color: $green;
+    }
+  }
+}
+
+.sharer-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  padding: $spacer*2;
+  h3 {
+    text-align: center;
+    padding-bottom: $spacer;
+  }
+  .btn {
+    width: 100%;
+    margin-bottom: $spacer;
+    @include media-breakpoint-up(sm) {
+      width:100%;
+    }
+  }
+}
