@@ -94,7 +94,7 @@
           background: $green;
 
           a.work-card__inner {
-            box-shadow: 0px 0px 0px rgba(#2B2B2B, 0);
+            box-shadow: 0 0 0 rgba(#2B2B2B, 0);
           }
         }
       }
@@ -106,7 +106,7 @@
         color: #333;
         box-shadow: 2px 2px 18px rgba(#2B2B2B, 0.45);
         text-decoration: none;
-        transition: .5s;
+        transition: 0.5s;
 
         img {
           width: 50%;
@@ -120,6 +120,32 @@
           font-weight: 400;
         }
       }
+    }
+  }
+}
+
+.home-news {
+  padding: $spacer*3 0;
+
+  &__heading {
+    h3 {
+      font-size: 22px;
+      padding-bottom: $spacer;
+    }
+  }
+
+  .news-card {
+    img {
+      padding-bottom: $spacer*.5;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    p {
+      font-size: 14px;
     }
   }
 }
