@@ -3,8 +3,8 @@
     {% if post.external_url %}
     <a href="{{ post.external_url }}" target="_blank" class="news-card__inner">
     {% else %}
-    <a href="{{ post.url }}" class="news-card__inner">
-      {% endif %}
+    <a href="{{ site.baseurl }}{{ post.url }}" class="news-card__inner">
+    {% endif %}
         <img src="{{ site.baseurl }}/assets/images/{{ post.image }}"  alt="Article thumbnail" class="img-fluid">
         <h4>{{ post.article_title }}</h4>
       </a>
