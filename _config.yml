@@ -2,7 +2,7 @@ name: Eli
 markdown: redcarpet
 highlighter: null # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json",  "README.md", "_scripts", "_scss", "gemfile", "Gemfile.lock"]
-url: "https://github.com/Ely-Nathan/new-site"
+url: "https://github.com/Eli-Nathan/new-site"
 destination: docs
 baseurl: /new-site
 # baseurl: ""
@@ -13,4 +13,5 @@ collections:
   posts:
     output:   true
 
+# permalink: /new-site/blog/:title/
 permalink: /blog/:title/
