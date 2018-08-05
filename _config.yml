@@ -2,10 +2,10 @@ name: Eli
 markdown: redcarpet
 highlighter: null # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json",  "README.md", "_scripts", "_scss", "gemfile", "Gemfile.lock"]
-url: "https://github.com/Ely-Nathan/bootstrap-npm"
-destination: docs
+url: "https://github.com/Eli-Nathan/new-site"
+# destination: docs
 baseurl: /new-site
-# baseurl: ""
+baseurl: ""
 collections:
   works:
     output: true
@@ -13,4 +13,5 @@ collections:
   posts:
     output:   true
 
+# permalink: /blog/:title/
 permalink: new-site/blog/:title/
