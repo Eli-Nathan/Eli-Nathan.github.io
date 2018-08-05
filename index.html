@@ -55,27 +55,24 @@ current: home
         <h3>My work</h3>
       </div>
       <div class="col-sm-12 home-pf__cards text-center">
-        <div class="col-md-4">
-          <div class="work-card">
-            <img src="{{ site.baseurl }}/assets/images/back-country-guide.png" alt="Back country guide logo" class="">
-            <h4></
-          </div>
+        <div class="row">
+          {% for work in site.works limit:3 %} {% include home-pf.html %} {% endfor %}
         </div>
-        <div class="col-md-4">
-          <div class="work-card">
-            <img src="{{ site.baseurl }}/assets/images/jake.png" alt="Jake Eaton" class="">
-            <h4></
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="work-card">
-            <img src="{{ site.baseurl }}/assets/images/login-signup.png" alt="Login form image" class="">
-            <h4></h4>
-          </div>
+        <div class="col-sm-12 text-center">
+          <a href="{{ site.baseurl }}/my-work" class="btn btn--default">View more</a>
         </div>
       </div>
-      <div class="col-sm-12 text-center">
-        <a href="{{ site.baseurl }}/my-work" class="btn btn--default">View more</a>
+    </div>
+  </div>
+</div>
+
+<div class="home-news">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        {% for post in site.posts limit:3 %}
+          {% include latest-news.html %}
+        {% endfor %}
       </div>
     </div>
   </div>

@@ -21,10 +21,12 @@
       }
       @include media-breakpoint-up(sm) {
         text-align: left;
+
         br {
           display: none;
         }
       }
+
       h1 {
         font-size: 30px;
       }
@@ -33,6 +35,7 @@
 
   .about-me {
     padding-top: $spacer * 1.5;
+
     p {
       margin-bottom: auto;
 
@@ -52,6 +55,7 @@
       margin-left: 0;
     }
   }
+
   .fa-star {
     &--legendary {
       color: #37C976;
@@ -63,6 +67,59 @@
 
     &--learning {
       color: #C98F37;
+    }
+  }
+}
+
+.home-pf {
+  padding: $spacer*3 0;
+
+  &__heading {
+    h3 {
+      font-size: 22px;
+      padding-bottom: $spacer;
+    }
+  }
+
+  &__cards {
+    .work-card {
+      background: #e5e5e5;
+      border-radius: 3px;
+      padding: $spacer;
+      margin-bottom: $spacer;
+      @include media-breakpoint-up(md) {
+        transition: 0.2s;
+
+        &:hover {
+          background: $green;
+
+          a.work-card__inner {
+            box-shadow: 0px 0px 0px rgba(#2B2B2B, 0);
+          }
+        }
+      }
+
+      a.work-card__inner {
+        display: block;
+        background: #fff;
+        padding: $spacer;
+        color: #333;
+        box-shadow: 2px 2px 18px rgba(#2B2B2B, 0.45);
+        text-decoration: none;
+        transition: .5s;
+
+        img {
+          width: 50%;
+          @include media-breakpoint-up(md) {
+            width: 75%;
+          }
+        }
+
+        h4 {
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
     }
   }
 }

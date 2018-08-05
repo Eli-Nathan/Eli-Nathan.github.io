@@ -7,7 +7,7 @@
 	  <meta name="robots" content="noindex">
   {% endif %}
 
-	<title>{{ page.title }} | Sitename</title>
+	<title>{{ page.title }} | Eli Nathan</title>
 
 	<meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.description }}{% endif %}">
 	<meta name="viewport" content="width=device-width">
@@ -16,18 +16,25 @@
 	<link rel="amphtml" href="{{site.url}}/amp{{page.url}}">
 	<link rel="canonical" href="{{site.url}}{{page.url}}">
 
-	<link rel="stylesheet" href="/assets/css/chassis/chassis-locally-hosted.css" />
-	<link rel="stylesheet" href="/assets/css/styles.css">
+	<!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	{% include google-analytics.html %}
+	<link rel="stylesheet" href="{{ site.baseurl}}/assets/css/styles.css">
+
+	<!-- Facebook -->
+	<meta name="og:url" content="{{ site.url }}{{ page.url }}" />
+	<meta name="og:title" content="{{ page.article_title }}" />
+	<meta name="og:description" content="{{ page.meta_description }}" />
+	<meta name="og:image" content="https://www.elisweb.co.uk/assets/images/{{ page.image }}" />
 
 	<!-- Twitter Cards -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@Twitter Name here" />
 	<meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
 	<meta name="twitter:title" content="{{ page.article_title }}" />
-	<meta name="twitter:description" content="{{ page.excerpt }}" />
-	<meta name="twitter:image" content="https://www.activacontracts.co.uk/assets/images/content/news/{% if page.image %}{{ page.image }}{% else %}budget.jpg{% endif %}" />
+	<meta name="twitter:description" content="{{ page.meta_description }}" />
+	<meta name="twitter:image" content="https://www.elisweb.co.uk/assets/images/{{ page.image }}" />
 </head>
 
 <body>
@@ -37,23 +44,14 @@
 
 		<div class="container content-container">
 			<div class="row ">
-				<div class="col-md-8 col-md-offset-2">
+				<div class="col-md-8 offset-md-2">
 					<section>
 						<article class="article--post">
-              {% if page.date %}
-		            <p class="block__item__date">
-	  					  <span class="clock-icon"></span>
-	  					  {{ page.date | date: "%-d %B %Y" }}<br>
-              {% endif %}
 		          <h1 class="article-title">{{ page.article_title }}</h1>
-
-		          {% if page.image %}
-		            <img src="/assets/images/content/news/{{ page.image }}" alt="" class="img--responsive image--full" />
-		          {% else %}
-		            <img src="/assets/images/content/news/budget.jpg" alt="" class="img--responsive image--full" />
-		          {% endif %}
-
-		          <p class="intro">{{ page.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+							<p>
+								<i class="fa fa-calendar" aria-hidden="true"></i> &nbsp; {{ page.date | date: "%-d %B %Y" }} &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> &nbsp; {{ page.tags | first | replace_first: '-', ' ' | capitalize }}
+							</p>
+		          <img src="{{ site.baseurl }}/assets/images/{{ page.image }}" alt="Article featured image" class="img-fluid" />
 							{{ content }}
 						</article>
 					</section>
@@ -61,16 +59,13 @@
 		  </div>
 		</div>
 
-    <div class="border border--category">
+    <div class="post-category">
 		  <div class="container content-container">
 		  	<div class="row">
-		      <div class="col-md-8 col-md-offset-2">
+		      <div class="col-md-8 offset-md-2">
 		        <div class="row">
-		          <div class="col-xs-12">
-		            <h2>Category</h2>
-		          </div>
-		          <div class="col-md-12">
-                <a class="btn btn--white btn--tag" href="/news/tags/{{ page.tags | first | lowercase }}">{{ page.tags | first | replace_first: '-', ' ' | capitalize }}</a>
+		          <div class="col-sm-12">
+
 		          </div>
 		        </div>
 		      </div>
