@@ -69,6 +69,11 @@ current: home
 <div class="home-news">
   <div class="container">
     <div class="row">
+      <div class="col-sm-12 home-news__heading">
+        <div class="col-sm-12">
+          <h3>Articles</h3>
+        </div>
+      </div>
       <div class="col-sm-12">
         {% for post in site.posts limit:3 %}
           {% include latest-news.html %}
