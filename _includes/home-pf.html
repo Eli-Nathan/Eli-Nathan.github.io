@@ -1,8 +1,13 @@
 <div class="col-md-4">
   <div class="work-card">
-    <a href="{{ work.external_url }}" target="_blank" class="work-card__inner">
+    <a href="{{ work.external_url }}" target="_blank">
+      <div class="work-card__image">
         <img src="{{ site.baseurl }}/assets/images/{{ work.image }}"  alt="Portfolio thumbnail" class="img-fluid">
-        <h4>{{ work.article_title }}</h4>
+      </div>
+        <div class="work-card__text">
+          <h4>{{ work.article_title }}</h4>
+          <p>{{ work.tag }}</p>
+        </div>
       </a>
   </div>
 </div>

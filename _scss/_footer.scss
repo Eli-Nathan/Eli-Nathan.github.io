@@ -1,6 +1,6 @@
 .footer {
   &__content {
-    padding: $spacer*3 0;
+    padding-top: $spacer*1.8 0;
 
     a {
       color: #333;
@@ -13,6 +13,13 @@
 
     .dribbble-link {
       color: #C32361;
+    }
+  }
+
+  &__button {
+    padding: $spacer 0;
+    a {
+      margin: $spacer 0;
     }
   }
   &__bottom {

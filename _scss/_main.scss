@@ -22,6 +22,10 @@ p, li {
   font-weight: 300;
 }
 
+a {
+  color: $green;
+}
+
 .btn {
   &--default {
     background: $red;
