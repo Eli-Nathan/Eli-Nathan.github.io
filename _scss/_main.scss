@@ -4,6 +4,10 @@ body {
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background: #fafafa;
   color: #333;
+  padding-top: 60px;
+  @include media-breakpoint-up(sm) {
+    padding-top: 30px;
+  }
 }
 
 h1,
