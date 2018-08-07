@@ -15,4 +15,4 @@ collections:
   posts:
     output:   true
 
-permalink: /blog/:title/
+permalink: /new-site/blog/:title/
