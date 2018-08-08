@@ -20,13 +20,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	{% include google-analytics.html %}
-	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+	<link rel="stylesheet" href="/assets/css/styles.css">
 
 	<!-- Facebook -->
 	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 	<meta property="og:title" content="{{ page.article_title }}" />
 	<meta property="og:description" content="{{ page.excerpt }}" />
-	<meta property="og:image" content="https://eli-nathan.github.io/new-site/assets/images/{{ page.image }}" />
+	<meta property="og:image" content="https://eli-nathan.github.io/assets/images/{{ page.image }}" />
 
 	<!-- Twitter Cards -->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -34,7 +34,7 @@
 	<meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
 	<meta name="twitter:title" content="{{ page.article_title }}" />
 	<meta name="twitter:description" content="{{ page.excerpt }}" />
-	<meta name="twitter:image" content="https://eli-nathan.github.io/new-site/assets/images/{{ page.image }}" />
+	<meta name="twitter:image" content="https://eli-nathan.github.io/assets/images/{{ page.image }}" />
 </head>
 
 <body>
@@ -51,7 +51,7 @@
 							<p class="text-center">
 								<i class="fa fa-calendar" aria-hidden="true"></i> &nbsp; {{ page.date | date: "%-d %B %Y" }} &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> &nbsp; {{ page.tags | first | replace_first: '-', ' ' | capitalize }}
 							</p>
-		          <img src="{{ site.baseurl }}/assets/images/{{ page.image }}" alt="Article featured image" class="img-fluid" />
+		          <img src="/assets/images/{{ page.image }}" alt="Article featured image" class="img-fluid" />
 							{{ content }}
 						</article>
 					</section>
@@ -68,13 +68,13 @@
 		            <h3>Share this post</h3>
 		          </div>
 		          <div class="col-sm-4">
-		            <a class="btn btn--facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//eli-nathan.github.io{{ site.baseurl }}{{ page.url }}" target="_blank">Facebook</a>
+		            <a class="btn btn--facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//eli-nathan.github.io{{ page.url }}" target="_blank">Facebook</a>
 		          </div>
 		          <div class="col-sm-4">
-		            <a class="btn btn--linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//eli-nathan.github.io{{ site.baseurl }}{{ page.url }}&title={{ page.article_title }}&summary=&source=" target="_blank">LinkedIn</a>
+		            <a class="btn btn--linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//eli-nathan.github.io{{ page.url }}&title={{ page.article_title }}&summary=&source=" target="_blank">LinkedIn</a>
 		          </div>
               <div class="col-sm-4">
-		            <a class="btn btn--twitter" href="https://twitter.com/home?status=https%3A//eli-nathan.github.io/new-site/{{ site.baseurl }}{{ page.url }}" target="_blank">Twitter</a>
+		            <a class="btn btn--twitter" href="https://twitter.com/home?status=https%3A//eli-nathan.github.io/{{ page.url }}" target="_blank">Twitter</a>
 		          </div>
 		        </div>
 		      </div>
