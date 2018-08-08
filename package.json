@@ -46,6 +46,7 @@
   ],
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "each-async": "^1.1.1",
     "gulp-mamp": "0.0.5",
     "popper.js": "^1.14.1",
     "server": "^1.0.18"
