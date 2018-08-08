@@ -62,11 +62,11 @@
     }
 
     &--good {
-      color: #9FC937;
+      color: #BBDE66;
     }
 
     &--learning {
-      color: #C98F37;
+      color: #DAA85C;
     }
   }
 }
@@ -101,7 +101,7 @@
       }
 
       &__image {
-        overflow: hidden; 
+        overflow: hidden;
         img {
           width: 100%;
         }
