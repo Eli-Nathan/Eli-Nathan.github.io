@@ -56,6 +56,13 @@
     }
   }
 
+  .key {
+    text-align: center;
+    @include media-breakpoint-up(sm) {
+      text-align: left;
+    }
+  }
+
   .fa-star {
     &--legendary {
       color: #37C976;
@@ -102,6 +109,7 @@
 
       &__image {
         overflow: hidden;
+
         img {
           width: 100%;
         }
@@ -120,7 +128,7 @@
         }
 
         p {
-          font-size:16px;
+          font-size: 16px;
         }
       }
     }

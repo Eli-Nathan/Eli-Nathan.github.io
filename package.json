@@ -13,7 +13,7 @@
   "author": "Eli Nathan",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "*",
+    "browser-sync": "^2.24.6",
     "browserify": "*",
     "eslint-config-airbnb-relaxed": "^0.2.0",
     "gulp": "*",
@@ -53,6 +53,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Eli-Nathan.git/new-site"
+    "url": "https://github.com/Eli-Nathan.git/Eli-Nathan.github.io/"
   }
 }
