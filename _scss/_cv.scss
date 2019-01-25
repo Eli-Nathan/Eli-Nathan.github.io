@@ -1,0 +1,72 @@
+.cv {
+  &__text {
+    margin-top: $spacer*3;
+
+    pre {
+      white-space: pre-wrap;
+      border-radius: 2px !important;
+      width: auto;
+      display: inline;
+      margin-bottom: $spacer*3;
+
+      code {
+        background: #1E272B;
+        padding: $spacer;
+        padding-left: 7px;
+        color: #fff;
+        border-radius: 2px !important;
+
+        .pink {
+          color: #C26EA3
+        }
+
+        .blue {
+          color: #1AAED5;
+        }
+
+        .green {
+          color: #E7AD2D;
+        }
+      }
+    }
+
+    hr {
+      background-color: #e5e5e5;
+      border-color: #e5e5e5;
+      margin-left: 0;
+    }
+
+    h1,
+    h2 {
+      font-size: 24px;
+    }
+
+    .first {
+      margin-top: $spacer*2;
+    }
+
+    h3 {
+      font-size: 20px;
+      line-height: 20px * 1.4;
+
+      .location,
+      .position {
+        font-weight: 400;
+      }
+
+      .grad {
+        font-weight: 400;
+        font-size: 18px;
+      }
+
+      .sites {
+        font-weight:300;
+        font-size: 16px;
+      }
+    }
+
+    &--last {
+      margin-bottom: $spacer*3;
+    }
+  }
+}
