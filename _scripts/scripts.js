@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import SocialCard from './SocialCard'
-console.log("test")
 
 // Get json data
 let request = new XMLHttpRequest()
@@ -11,17 +10,17 @@ request.send()
 
 // When data is returned...
 request.onload = function() {
-  console.log("Got data")
   // @Data returned
   let data = request.response
   // Loop through data
   for(let i in data) {
-    // Create a div...
-    let eachDiv = document.createElement("DIV")
     // Post postsContainer
     let postsContainer = document.querySelectorAll('[data-container="posts"]')
+
+    // Create a div...
+    let eachDiv = document.createElement("DIV")
     // With Bootstrap classes
-    eachDiv.setAttribute("class", "col-md-8 offset-md-2 col-lg-6 offset-lg-3")
+    eachDiv.setAttribute("class", "col-md-8 offset-md-2")
     // Add each created div to that container
     postsContainer[0].appendChild(eachDiv)
 

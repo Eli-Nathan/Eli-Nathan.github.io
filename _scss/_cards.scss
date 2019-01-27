@@ -4,10 +4,6 @@ $background: #fafafa;
   padding-top: 48px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
 .card {
   background: #fff;
   border: 1px solid #e5e5e5;
@@ -96,6 +92,7 @@ code {
   }
 }
 
-button {
-
+.code-section {
+  margin-top: 24px;
+  margin-bottom: 24px;
 }

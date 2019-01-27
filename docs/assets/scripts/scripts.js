@@ -118,25 +118,23 @@ var _SocialCard = _interopRequireDefault(require("./SocialCard"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log("test"); // Get json data
-
+// Get json data
 var request = new XMLHttpRequest();
 request.open('GET', '/assets/scripts/posts.json');
 request.responseType = 'json';
 request.send(); // When data is returned...
 
 request.onload = function () {
-  console.log("Got data"); // @Data returned
-
+  // @Data returned
   var data = request.response; // Loop through data
 
   for (var i in data) {
-    // Create a div...
-    var eachDiv = document.createElement("DIV"); // Post postsContainer
+    // Post postsContainer
+    var postsContainer = document.querySelectorAll('[data-container="posts"]'); // Create a div...
 
-    var postsContainer = document.querySelectorAll('[data-container="posts"]'); // With Bootstrap classes
+    var eachDiv = document.createElement("DIV"); // With Bootstrap classes
 
-    eachDiv.setAttribute("class", "col-md-8 offset-md-2 col-lg-6 offset-lg-3"); // Add each created div to that container
+    eachDiv.setAttribute("class", "col-md-8 offset-md-2"); // Add each created div to that container
 
     postsContainer[0].appendChild(eachDiv); // Render each div as a react component
 

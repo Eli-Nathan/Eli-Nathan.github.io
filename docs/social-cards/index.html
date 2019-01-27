@@ -30,6 +30,10 @@
 <!-- End Google Tag Manager -->
 
 	<link rel="stylesheet" href="/assets/css/styles.css">
+	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+		<link rel="stylesheet" href="/assets/css/darcula-theme.css">
+	
 </head>
 
 <body>
@@ -47,6 +51,128 @@
 
 		<div class="container post-wrap">
   <div class="row" data-container="posts">
+  </div>
+</div>
+
+<div class="container code-snippets">
+  <div class="row">
+    <div class="col-xs-12 col-md-10 offset-md-1 code-section">
+      <h2>View code</h2>
+      <h5>Main JS file</h5>
+      <pre><code class="language-js">// JS file
+import React from 'react'
+import ReactDOM from 'react-dom'
+import SocialCard from './SocialCard'
+
+// Get json data
+let request = new XMLHttpRequest()
+request.open('GET', '/assets/scripts/posts.json')
+request.responseType = 'json'
+request.send()
+
+// When data is returned...
+request.onload = function() {
+  // @Data returned
+  let data = request.response
+  // Loop through data
+  for(let i in data) {
+    // Post postsContainer
+    let postsContainer = document.querySelectorAll('[data-container="posts"]')
+    
+    // Create a div...
+    let eachDiv = document.createElement("DIV")
+    // With Bootstrap classes
+    eachDiv.setAttribute("class", "col-md-8 offset-md-2")
+    // Add each created div to that container
+    postsContainer[0].appendChild(eachDiv)
+
+    // Render each div as a react component
+    ReactDOM.render( <SocialCard data={data[i]} />, eachDiv )
+  }
+}</code></pre>
+    </div>
+
+    <div class="col-xs-12 col-md-10 offset-md-1 code-section">
+      <h5>Component JS file</h5>
+      <pre class="language-js"><code class="language-js">// Component JS file
+import React, {Component} from 'react';
+
+class SocialCard extends Component {
+  constructor(props) {
+    super(props);
+    this.toggleLike = this.toggleLike.bind(this)
+    // Set initial state for likes
+    this.state = {
+      likes: this.props.data['likes'],
+      likeClass: "interactions__icon interactions__icon--heart"
+    }
+  }
+
+  // Toggle like on/off function (Here we would update the data but for I'm just making a Recomponent now so I'll just toggle it on the front end)
+  toggleLike() {
+    // If the state is equal to the data then the user has not liked
+    if(this.state.likes == this.props.data['likes']) {
+      // change the state to reflect the user's like
+      this.setState({
+        likes: this.props.data['likes'] + 1,
+        likeClass: "interactions__icon interactions__icon--heart-liked"
+      })
+    }
+
+    // Otherwise...
+    else {
+      // Reset like amounts to data value
+      this.setState({
+        likes: this.state.likes - 1,
+        likeClass: "interactions__icon interactions__icon--heart"
+      })
+    }
+  }
+
+  render() {
+  return (
+      &#x3C;div className=&#x22;card&#x22;&#x3E;
+        &#x3C;div className=&#x22;card__user&#x22;&#x3E;
+          &#x3C;img
+            src={this.props.data[&#x27;thumbnail&#x27;]}
+            alt={this.props.data[&#x27;user&#x27;]}
+            className=&#x22;profile-pic&#x22;
+          /&#x3E;
+          &#x3C;h5&#x3E;{this.props.data[&#x27;user&#x27;]}&#x3C;/h5&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;div className=&#x22;card__post&#x22;&#x3E;
+          &#x3C;p&#x3E;{this.props.data[&#x27;content&#x27;]}&#x3C;/p&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;div className=&#x22;card__image&#x22;&#x3E;
+          &#x3C;img
+            src={this.props.data[&#x27;image&#x27;]}
+            alt=&#x22;Image alt text&#x22;
+          /&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;div className=&#x22;card__info&#x22;&#x3E;
+          &#x3C;h4&#x3E;{this.props.data[&#x27;title&#x27;]}&#x3C;/h4&#x3E;
+          &#x3C;h6&#x3E;{this.props.data[&#x27;date&#x27;]}&#x3C;/h6&#x3E;
+          &#x3C;div className=&#x22;interactions&#x22;&#x3E;
+            &#x3C;button
+              className={this.state.likeClass}
+              onClick={this.toggleLike}
+            &#x3E;
+              {this.state.likes}
+            &#x3C;/button&#x3E;
+            &#x3C;button className=&#x22;interactions__icon interactions__icon--comments&#x22;&#x3E;
+              0
+            &#x3C;/button&#x3E;
+            &#x3C;button className=&#x22;interactions__icon interactions__icon--share&#x22;&#x3E;
+              0
+            &#x3C;/button&#x3E;
+          &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+    );
+  }
+}
+
+export default SocialCard;</code></pre>
   </div>
 </div>
 
@@ -108,6 +234,7 @@
 
 	 <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
  <script src="/assets/scripts/scripts.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
 
 
 </body>
