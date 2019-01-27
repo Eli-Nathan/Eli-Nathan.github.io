@@ -1,0 +1,101 @@
+$background: #fafafa;
+
+.post-wrap {
+  padding-top: 48px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  margin-bottom: 24px;
+
+  &__user {
+    padding: 12px;
+    background: #fafafa;
+
+    img.profile-pic {
+      border-radius: 20px;
+      width: 40px;
+      display: inline;
+    }
+
+    h5 {
+      display: inline;
+      margin-left: 12px;
+    }
+  }
+
+  &__post {
+    margin: 18px 12px;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    padding: 12px 14px;
+
+    h4 {
+      font-size: 20px;
+    }
+
+    h6 {
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    .interactions {
+      margin-top: 18px;
+
+      &__icon {
+        border: none;
+        cursor: pointer;
+        position: relative;
+        padding: 18px;
+        line-height: 0;
+        border-radius: 3px;
+        padding-left: 40px;
+        text-align: left;
+        margin-right: 6px;
+        cursor: pointer;
+
+        &:focus,
+        &:active {
+          outline: none;
+        }
+
+        &--heart {
+          background: #f2f2f2 url("../images/heart.svg") no-repeat calc(0% + 12px) center / 20px;
+        }
+
+        &--heart-liked {
+          background: #f2f2f2 url("../images/heart--liked.svg") no-repeat calc(0% + 12px) center / 20px;
+        }
+
+        &--comments {
+          background: #f2f2f2 url("../images/comments.svg") no-repeat calc(0% + 12px) center / 20px;
+        }
+
+        &--share {
+          background: #f2f2f2 url("../images/share.svg") no-repeat calc(0% + 12px) center / 20px;
+        }
+      }
+    }
+  }
+}
+
+button {
+
+}

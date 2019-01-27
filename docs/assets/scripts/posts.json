@@ -1,0 +1,25 @@
+[{
+    "post_id": "001",
+    "user":"Joeseph Briggs",
+    "thumbnail":"/assets/images/users/user-1.jpg",
+    "content":"Would love to go here! 😍",
+    "image": "/assets/images/posts/travel.jpg",
+    "title": "The worlds best travel destinations",
+    "likes": 2,
+    "date": "04/01/2019",
+    "comments": 0,
+    "shares": 7
+  },
+  {
+    "post_id": "002",
+    "user":"Lois Adams",
+    "thumbnail":"/assets/images/users/user-2.jpg",
+    "content":"Cityscape photography at its best!",
+    "image": "/assets/images/posts/cityscape.jpg",
+    "title": "Cityscape gallery",
+    "likes": 4,
+    "date": "10/01/2019",
+    "comments": 0,
+    "shares": 2
+  }
+]

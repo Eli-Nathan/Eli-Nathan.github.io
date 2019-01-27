@@ -2,6 +2,7 @@ var gulp = require('gulp'),
   argv = require('yargs').argv,
   browserify = require('browserify'),
   browserSync = require('browser-sync'),
+  babelify = require('babelify'),
   buffer = require('gulp-buffer'),
   changed = require('gulp-changed'),
   cp = require('child_process'),
@@ -47,32 +48,33 @@ gulp.task('share', function() {
 });
 
 gulp.task('javascripts', function() {
-  return gulp.src(['./_scripts/*.js', './_scripts/**/*.js'])
+  return gulp.src(['./_scripts/**/*.js'])
     .pipe(gulpif(!argv.force, changed('./assets/scripts', {
       extension: '.js'
     })))
-    .pipe(tap(function(file) {
-      gutil.log('JavaScripts Bundled: ' + file.path);
-      file.contents = browserify(file.path, {
-        debug: true,
-        paths: ['./node_modules', './_scripts']
-      }).bundle().on('error', function(err) {
-        browserSync.notify(err.message, 10000);
-        console.log(err);
-        this.emit('end');
-      });
-    }))
+    .pipe(
+      tap(function(file) {
+        file.contents = browserify(file.path, {
+          debug: true,
+          paths: ["./node_modules", "./assets/_scripts"]
+        })
+        .transform(babelify, {
+          presets: ["@babel/preset-env", "@babel/preset-react"]
+        })
+        .bundle()
+        .on("error", function(err) {
+          console.log(err);
+          this.emit("end");
+        });
+      })
+    )
     .pipe(buffer())
-    // .pipe(sourcemaps.init({
-    //     loadMaps: true
-    // }))
-    .pipe(uglify())
-    .pipe(rename(function(path) {
-      path.basename = 'bundle';
-      path.extname = '.js';
+    .pipe(sourcemaps.init({
+        loadMaps: true
     }))
     // .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./assets/scripts'))
+    .pipe(gulp.dest('./docs/assets/scripts'))
 });
 
 
