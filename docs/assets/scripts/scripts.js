@@ -118,31 +118,34 @@ var _SocialCard = _interopRequireDefault(require("./SocialCard"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// Get json data
-var request = new XMLHttpRequest();
-request.open('GET', '/assets/scripts/posts.json');
-request.responseType = 'json';
-request.send(); // When data is returned...
+// Post postsContainer
+var postsContainer = document.querySelectorAll('[data-container="posts"]');
 
-request.onload = function () {
-  // @Data returned
-  var data = request.response; // Loop through data
+if (postsContainer.length > 0) {
+  // Get json data
+  var request = new XMLHttpRequest();
+  request.open('GET', '/assets/scripts/posts.json');
+  request.responseType = 'json';
+  request.send(); // When data is returned...
 
-  for (var i in data) {
-    // Post postsContainer
-    var postsContainer = document.querySelectorAll('[data-container="posts"]'); // Create a div...
+  request.onload = function () {
+    // @Data returned
+    var data = request.response; // Loop through data
 
-    var eachDiv = document.createElement("DIV"); // With Bootstrap classes
+    for (var i in data) {
+      // Create a div...
+      var eachDiv = document.createElement("DIV"); // With Bootstrap classes
 
-    eachDiv.setAttribute("class", "col-md-8 offset-md-2"); // Add each created div to that container
+      eachDiv.setAttribute("class", "col-md-8 offset-md-2"); // Add each created div to that container
 
-    postsContainer[0].appendChild(eachDiv); // Render each div as a react component
+      postsContainer[0].appendChild(eachDiv); // Render each div as a react component
 
-    _reactDom.default.render(_react.default.createElement(_SocialCard.default, {
-      data: data[i]
-    }), eachDiv);
-  }
-};
+      _reactDom.default.render(_react.default.createElement(_SocialCard.default, {
+        data: data[i]
+      }), eachDiv);
+    }
+  };
+}
 /* Just a bit of fun for the console log for nosey devs */
 
 
