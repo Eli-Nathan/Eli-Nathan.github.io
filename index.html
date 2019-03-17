@@ -42,8 +42,18 @@ current: home
       </div>
       <div class="about-me col-md-6 align-self-end align-items-end">
         <p>I’ve been building websites for around 4 years now after changing career from being a chef in some of Scotland’s most high profile establishments.</p>
+        <p>I'm currently working for <a href="https://arnoldclark.com" target="_blank">Arnold Clark</a> designing and developing their many websites.
         <p><a href="#" data-toggle="modal" data-target="#tech-stack">Click here</a> to see some of the technologies I like to work with.</p>
-        <p><strong>*New*</strong> Check out my <a href="/social-cards">social cards UI components</a> I built using ReactJS. </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="bg-info py-2 feature">
+        <p class="text-white mb-0 text-center"><strong>*New*</strong> Check out my <a href="/social-cards" class="text-white">social cards UI components</a> I built using ReactJS.</p>
       </div>
     </div>
   </div>
@@ -87,17 +97,60 @@ current: home
   </div>
 </div>
 
+<div class="react">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 home-news__heading text-center">
+        <h3>Working with React</h3>
+      </div>
+      <div class="col-md-4">
+        <div class="react-card">
+          <a href="https://eli-nathan.github.io/React-Image-Gallery/" target="_blank" class="news-card__inner">
+            <img src="/assets/images/camera.svg" alt="Camera illustration" class="img-fluid">
+            <h4>Image Gallery</h4>
+            <p>
+              An accessible image gallery with lightbox
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="react-card">
+          <a href="https://eli-nathan.github.io/Social-meta/" target="_blank" class="news-card__inner">
+            <img src="/assets/images/meta.svg" alt="Camera illustration" class="img-fluid">
+            <h4>Social meta generator</h4>
+            <p>
+              A tool to generate all the social meta tags you need. Including OpenGraph and Twitter
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="react-card">
+          <a href="https://eli-nathan.github.io/Deals/" target="_blank" class="news-card__inner">
+            <img src="/assets/images/data.svg" alt="Data illustration" class="img-fluid">
+            <h4>Data generator</h4>
+            <p>
+              A json/csv generator built for Arnold Clark's Affinity Cars product
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <hr>
+        <p class="text-center">I try to build small, useful tools as often as possible. Check out more of my work on <a href="https://github.com/Eli-Nathan/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="home-news">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 home-news__heading">
         <h3>Articles</h3>
       </div>
-      <div class="col-sm-12">
-        <div class="row">
-          {% for post in site.posts limit:3 %} {% include latest-news.html %} {% endfor %}
-        </div>
-      </div>
+      {% for post in site.posts limit:3 %} {% include latest-news.html %} {% endfor %}
     </div>
   </div>
 </div>

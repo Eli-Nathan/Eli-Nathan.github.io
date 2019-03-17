@@ -86,8 +86,16 @@
   }
 }
 
+.feature {
+  border-radius: 4px;
+  a {
+    text-decoration: underline;
+  }
+}
+
 .home-pf {
-  padding: $spacer*3 0;
+  padding-bottom: $spacer*5;
+  padding-top: $spacer*2;
 
   &__heading {
     h3 {
@@ -112,7 +120,6 @@
 
       a {
         color: #616161;
-        text-decoration: none;
       }
 
       &__image {
@@ -144,7 +151,7 @@
 }
 
 .home-news {
-  padding-bottom: $spacer*2 0;
+  padding: $spacer*5 0;
 
   &__heading {
     h3 {
@@ -162,11 +169,51 @@
 
     a {
       color: #333;
-      text-decoration: none;
     }
 
     p {
       font-size: 14px;
+    }
+  }
+}
+
+.react {
+  background: #17a2b8;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(left, $green, #17a2b8);
+  background: -o-linear-gradient(left, $green, #17a2b8);
+  background: linear-gradient(to right, $green, #17a2b8);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+  padding: $spacer*5 0;
+
+  h3 {
+    font-size: 30px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .react-card {
+    text-align: center;
+    color: #fff;
+    margin-bottom: $spacer*3;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    img {
+      width: 50%;
+
+      @include media-breakpoint-up(md) {
+        width: 75%;
+      }
     }
   }
 }

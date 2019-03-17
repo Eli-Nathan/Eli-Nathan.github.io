@@ -1,0 +1,15 @@
+<div class="col-md-4">
+  <div class="react-card">
+    {% if react.external_url %}
+    <a href="{{ react.external_url }}" target="_blank" class="news-card__inner">
+    {% else %}
+    <a href="{{ react.url }}" class="news-card__inner">
+      {% endif %}
+        <img src="/assets/images/{{ react.image }}"  alt="Article thumbnail" class="img-fluid">
+        <h4>{{ react.article_title }}</h4>
+        <p>
+          {{ react.excerpt }}
+        </p>
+      </a>
+  </div>
+</div>

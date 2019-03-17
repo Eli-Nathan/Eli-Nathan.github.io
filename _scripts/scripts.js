@@ -2,6 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import SocialCard from './SocialCard'
 
+var $ = require('jquery');
+var $ = require('bootstrap');
+
 // Post postsContainer
 let postsContainer = document.querySelectorAll('[data-container="posts"]')
 
