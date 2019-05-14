@@ -2,7 +2,7 @@
     geoxml3.js
 
     Renders KML on the Google Maps JavaScript API Version 3 
-    http://code.google.com/p/geoxml3/
+    https://code.google.com/p/geoxml3/
 
    Copyright 2010 Sterling Udell, Larry Ross
 
@@ -10,7 +10,7 @@
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+       https://www.apache.org/licenses/LICENSE-2.0
 
    Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
@@ -189,8 +189,8 @@ function processStyle(thisNode, styles, styleID) {
       return styles[styleID];
 }
 
-// from http://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-clone-a-javascript-object
-// http://keithdevens.com/weblog/archive/2007/Jun/07/javascript.clone
+// from https://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-clone-a-javascript-object
+// https://keithdevens.com/weblog/archive/2007/Jun/07/javascript.clone
   function clone(obj){
       if(obj == null || typeof(obj) != 'object') return obj;
       var temp = new obj.constructor(); 
@@ -715,14 +715,14 @@ var randomColor = function(){
         if (stdRegEx.test(style.href)) {
           // A standard GMap-style marker icon
           style.shadow = new google.maps.MarkerImage(
-              'http://maps.google.com/mapfiles/ms/micons/msmarker.shadow.png',
+              'https://maps.google.com/mapfiles/ms/micons/msmarker.shadow.png',
               shadowSize,
               zeroPoint,
               shadowPoint);
         } else if (style.href.indexOf('-pushpin.png') > -1) {
           // Pushpin marker icon
           style.shadow = new google.maps.MarkerImage(
-            'http://maps.google.com/mapfiles/ms/micons/pushpin_shadow.png',
+            'https://maps.google.com/mapfiles/ms/micons/pushpin_shadow.png',
             shadowSize,
             zeroPoint,
             shadowPoint);

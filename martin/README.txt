@@ -4,7 +4,7 @@ Just a little document to explain some things:
 
 *** Bootstrap ***
 
-The documentation for Bootstrap can be found here: http://getbootstrap.com/
+The documentation for Bootstrap can be found here: https://getbootstrap.com/
 It contains explanations and examples. The files are downloaded and linked to in the HTML so you don't have to worry about updating
 
 The Column layout is as follows:

@@ -167,7 +167,7 @@ var FT_Query2 = "SELECT 'name_0', 'name_1', 'kml_4326' FROM "+FT_TableID+" WHERE
 document.getElementById("FTquery2").innerHTML = FT_Query2; 
   var queryText = encodeURIComponent(FT_Query2);
   // alert("createSidebar query="+FT_Query2);
-  var query = new google.visualization.Query('http://www.google.com/fusiontables/gvizdata?tq='  + queryText);
+  var query = new google.visualization.Query('https://www.google.com/fusiontables/gvizdata?tq='  + queryText);
   
   //set the callback function
   query.send(getData);
@@ -247,7 +247,7 @@ if (response.isError()) {
 } 
   FTresponse = response;
   //for more information on the response object, see the documentation
-  //http://code.google.com/apis/visualization/documentation/reference.html#QueryResponse
+  //https://code.google.com/apis/visualization/documentation/reference.html#QueryResponse
   numRows = response.getDataTable().getNumberOfRows();
   numCols = response.getDataTable().getNumberOfColumns();
   

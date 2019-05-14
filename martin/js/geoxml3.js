@@ -2,7 +2,7 @@
     geoxml3.js
 
     Renders KML on the Google Maps JavaScript API Version 3 
-    http://code.google.com/p/geoxml3/
+    https://code.google.com/p/geoxml3/
 
    Copyright 2010 Sterling Udell, Larry Ross
 
@@ -10,7 +10,7 @@
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+       https://www.apache.org/licenses/LICENSE-2.0
 
    Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
@@ -256,8 +256,8 @@ function processStyle(thisNode, styles, styleID) {
       return styles[styleID];
 }
 
-// from http://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-clone-a-javascript-object
-// http://keithdevens.com/weblog/archive/2007/Jun/07/javascript.clone
+// from https://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-clone-a-javascript-object
+// https://keithdevens.com/weblog/archive/2007/Jun/07/javascript.clone
   function clone(obj){
       if(obj == null || typeof(obj) != 'object') return obj;
       var temp = new obj.constructor(); 
@@ -797,7 +797,7 @@ var coordListA = [];
         if (stdRegEx.test(style.href)) {
           // A standard GMap-style marker icon
           style.shadow = {
-	    url: 'http://maps.google.com/mapfiles/ms/micons/msmarker.shadow.png',
+	    url: 'https://maps.google.com/mapfiles/ms/micons/msmarker.shadow.png',
 	    size: shadowSize,
 	    origin: zeroPoint,
 	    anchor: shadowPoint,
@@ -805,7 +805,7 @@ var coordListA = [];
         } else if (style.href.indexOf('-pushpin.png') > -1) {
           // Pushpin marker icon
           style.shadow = {
-	    url: 'http://maps.google.com/mapfiles/ms/micons/pushpin_shadow.png',
+	    url: 'https://maps.google.com/mapfiles/ms/micons/pushpin_shadow.png',
 	    size: shadowSize,
 	    origin: zeroPoint,
 	    anchor: shadowPoint,
@@ -1124,7 +1124,7 @@ geoXML3.xmlParse = function (str) {
   return document.createElement('div', null);
 }
 
-// from http://stackoverflow.com/questions/11563554/how-do-i-detect-xml-parsing-errors-when-using-javascripts-domparser-in-a-cross
+// from https://stackoverflow.com/questions/11563554/how-do-i-detect-xml-parsing-errors-when-using-javascripts-domparser-in-a-cross
 geoXML3.isParseError = function(parsedDocument) {
     if ((typeof ActiveXObject != 'undefined') || ("ActiveXObject" in window))
 	return false;
@@ -1133,7 +1133,7 @@ geoXML3.isParseError = function(parsedDocument) {
         errorneousParse = p.parseFromString('<', 'text/xml'),
         parsererrorNS = errorneousParse.getElementsByTagName("parsererror")[0].namespaceURI;
 
-    if (parsererrorNS === 'http://www.w3.org/1999/xhtml') {
+    if (parsererrorNS === 'https://www.w3.org/1999/xhtml') {
         // In PhantomJS the parseerror element doesn't seem to have a special namespace, so we are just guessing here :(
         return parsedDocument.getElementsByTagName("parsererror").length > 0;
     }
