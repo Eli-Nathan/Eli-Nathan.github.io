@@ -1,0 +1,283 @@
+// Colours Here
+$white: #FFF;
+$black: #000;
+$dark: #222!important;
+$light: #EEE!important;
+// Light para
+.lightPara {
+    color:#767272;
+    font-weight:100;
+}
+.icons {
+    color:#959393;
+}
+
+//Remove bootstrap's side padding
+@mixin no-pad {
+    padding-left:0px!important;
+    padding-right:0px!important;
+}
+
+
+//Full background image (needs image)
+@mixin full-background {
+  background: {
+     size: cover;
+     position: center;
+     repeat: no-repeat;
+  }
+}
+
+
+// Text alignment
+.text-center {
+    text-align:center;
+}
+.text-left {
+    text-align:left;
+}
+.text-right {
+    text-align:right;
+}
+
+
+// Justified Bootstrap Navigation
+@mixin justify-nav {
+@media (min-width: 768px) {
+    .navbar {
+        .navbar-nav {
+            display: inline-block;
+            float: none;
+            vertical-align: top;
+        }
+        .navbar-collapse {
+            text-align: center;
+        }
+    }
+}
+}
+
+
+//Remove bootstrap styles for nav-toggle
+.navbar-toggle {
+    border:none!important;
+    background-color:transparent!important;
+&:hover {
+    border:none!important;
+    background-color:transparent!important;
+}
+&:focus {
+    border:none!important;
+    background-color:transparent!important;
+}
+}
+.navbar {
+    li {
+        &:focus {
+            background:transparent!important;
+        }
+        &:active {
+            background:transparent!important;
+        }
+        a {
+            &:focus {
+                background:transparent!important;
+            }
+            &:active {
+                background:transparent!important;
+            }
+            background:transparent!important;
+        }
+    }
+    .dropdown-menu {
+        background:transparent;
+        padding:20px;
+        border:none;
+        width:500px;
+        box-shadow:none;
+        .input-group {
+            border-radius:0px;
+            input {
+                border-radius:0px;
+                background:transparent;
+                border:1px solid #fff;
+                width:100%;
+            }
+            .btn {
+                border-radius: 0px;
+                border:1px solid #fff;
+            }
+        }
+    }
+}
+
+.whiteBack {
+    .dropdown-menu {
+        input {
+            background:#fff!important;
+            border-color:#2a2a2a!important;
+        }
+        .btn {
+            border-color:#2a2a2a!important;
+        }
+    }
+}
+.navbarScrolled {
+    .dropdown-menu {
+        background:#2a2a2a!important;
+        input {
+            background:transparent!important;
+            border-color:#fff!important;
+        }
+        .btn {
+            border-color:#fff!important;
+        }
+    }
+}
+
+// Remove bootstrap carousel gradient
+
+#eventsCarousel {
+    .carousel-control {
+        background-image:none!important;
+        padding-top:50vh;
+        color:#000;
+        font-size:100px;
+        opacity: 1;
+        -webkit-text-stroke: 6px white;
+        text-shadow: none;
+        &:hover {
+            color:#000;
+        }
+        &:focus {
+            color:#000;
+        }
+    }
+    .carousel {
+        .left {
+            padding-right:30px;
+        }
+        .right {
+            padding-left:25px;
+        }
+    }
+}
+#tourenCarousel {
+    .carousel-indicators {
+        display:none;
+    }
+    .carousel-control {
+        background-image:none!important;
+        color:#fff;
+        font-size:50px;
+        top:15vh;
+        @media(max-width:768px) {
+            margin-top:-5vh;
+        }
+        opacity: 1;
+        -webkit-text-stroke: 2px #2a2a2a;
+        text-shadow: none;
+        &:hover {
+            color:#fff;
+        }
+        &:focus {
+            color:#fff;
+        }
+    }
+        .left {
+            padding-right:15px;
+            @media(max-width:480px) {
+                margin-left:-30px;
+            }
+        }
+        .right {
+            padding-left:15px;
+            @media(max-width:480px) {
+                margin-right:-30px;
+            }
+        }
+}
+#alsoLikeCarousel {
+    display:none;
+    margin-top:30px;
+    @media(max-width:768px) {
+        display:block;
+    }
+    .carousel-indicators {
+        display:none;
+    }
+    .carousel-control {
+        background-image:none!important;
+        color:#000;
+        font-size:50px;
+        padding-top:35vh;
+        @media(max-width:768px) {
+            padding-top:10vh;
+        }
+        opacity: 1;
+        -webkit-text-stroke: 2px #fff;
+        text-shadow: none;
+        &:hover {
+            color:#ooo;
+        }
+        &:focus {
+            color:#ooo;
+        }
+    }
+        .left {
+            padding-right:15px;
+        }
+        .right {
+            padding-left:15px;
+        }
+}
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select:focus,
+textarea {
+  font-size: 16px;
+}
+
+
+// Bootstrap Carousel Fade
+@mixin fade-carousel {
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    .carousel-control {
+        z-index: 2;
+    }
+}
+}

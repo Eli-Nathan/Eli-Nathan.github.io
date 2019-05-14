@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Magazine</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo-dark.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/logo-dark.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/logo-dark.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/logo-dark.png">
+    <!-- Animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+       <!-- Font Awesome CSS -->
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+<body>
+<!-- Div with fixed position 100% of the screen height to show the vertical lines -->
+<div class="backgroundElements col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="bordered col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="bordered col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="bordered col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="bordered col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="bordered col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="bordered col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+</div>
+<!-- Bootstrap Navigation bar fixed to the top of the page to allow users to access it after they scroll down -->
+<nav class="navbar whiteBack navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-left" href="/martin">
+            <img src="images/logo-dark.png" alt="Back Country Guide Logo"/>
+        </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+     <!-- class:navbar-right allows the naviagtion links to be floated to the right on all screens apart from mobile --> 
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="tourentipps.html">Tourentipps</a></li>
+        <li><a href="guide.html">Guide</a></li>
+        <li><a href="magazine.html" class='active'>Magazine</a></li>
+        <li><a href="/martin">Kontakt</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Suchen</a>
+          <ul class="dropdown-menu pullDown">
+             <form>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search for...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                  </span>
+                </div><!-- /input-group -->
+              </form>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- pageInfo same as tourentipps.html -->
+<div class="pageInfo col-lg-12 col-md-12 col-sm-12 col-xs-12">
+   <h3 class="text-center pageTitle">Magazine</h3>
+    <div class="breadCrumbs col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="crumbsInner col-lg-10 col-md-10 col-sm-10 col-xs-offset-1 col-xs-10">
+            <p class="crumbTrail col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <span class="crumb"><a href="#">Home</a></span> &nbsp;
+                <span class="divider"><i class="fa fa-angle-double-right"></i></span>&nbsp;
+                <span class="crumb">Magazine</span>&nbsp;
+            </p>
+        </div>
+    </div>
+</div>
+  <!-- magazine same as index.html apart from first two articles each being 6 columns on large screen (half-width) and 12 columns on small screens (full width) -->
+   <div class="magazine magPage col-lg-12 col-md-12 col-sm-12 col-xs-12">
+     <!-- background textures -->
+      <div class="textures col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      
+        <div class="debris">
+          <div class="col-lg-offset-7">
+              <div class="square-border"></div>
+              <div class="square-border2"></div>
+              <div class="square-border3"></div>
+              <div class="square-border4"></div>
+              <div class="square-border5"></div>
+              <div class="square-border6"></div>
+                <div class="block"></div>
+          </div>
+          <div class='text-right col-sm-offset-9'>
+              <div class="square"></div>
+              <div class='block2'></div>
+          </div>
+        </div>
+    </div>
+       <div class="magazineInner col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-12 col-xs-12">
+           <div class="magazineGrid col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="row">
+               <!-- HALF width element -->
+                <div class="magazineBlock firstMaga col-lg-6 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-6 col-sm-12 col-xs-12">
+                    <a href='#'><img src="images/magazine/magazineBig1.png" alt="Magazin 1" /></a>
+                    <div class="magazineDetail col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                   <p class="category lightPara">Photography</p>
+                        <h3><a href='#'>Lorem ipsum dolor sit amet</a></h3>
+                   <hr class="miniHR">
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollisvolutpat sagittis. Ut aliquam luctus neque sit amet pharetra. </p>
+                   <p class="category lightPara">13 Nov 13</p>
+                   <div class="continue col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                       <p><a href='#'><strong>Continue Reading</strong></p>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right icons">
+                       <i class="fa fa-heart" aria-hidden="true"></i> &nbsp; <i class="fa fa-exchange" aria-hidden="true"></i>
+                   </div>
+                    </div>
+               </div>
+               
+               <!-- HALF width element -->
+               <div class="magazineBlock col-lg-6 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-6 hidden-sm hidden-xs">
+                   <a href='#'><img src="images/magazine/magazineBig2.png" alt="Magazin 1" /></a>
+                   <p class="category lightPara">Video</p>
+                       <h3><a href='#'>Lorem ipsum dolor sit amet</a></h3>
+                   <hr class="miniHR">
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollisvolutpat sagittis. Ut aliquam luctus neque sit amet pharetra. </p>
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis dui sed purus rhoncus, a eleifend arcu sodales. Aliquam eleifend, ipsum sit amet aliquet elementum, leo massa ultricies mauris, ac vulputate ex leo vel eros. In sed aliquam urna. Maecenas vestibulum magna at quam vulputate, at auctor orci volutpat.</p>
+                   <p class="category lightPara">13 Nov 13</p>
+                   <div class="continue col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                       <p><a href='#'><strong>Continue Reading</strong></a></p>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right icons">
+                       <i class="fa fa-heart" aria-hidden="true"></i> &nbsp; <i class="fa fa-exchange" aria-hidden="true"></i>
+                   </div>
+               </div>
+               </div>
+               <!-- regular grid showing three items in a row similar to index.html -->
+                <!-- bootstrap row -->
+               <div class="row">
+               <!-- magazine block -->
+                <div class="magazineBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-6 col-xs-10 col-xs-offset-1">
+                    <a href='#'><img src="images/home/magazin1.png" alt="Magazin 1" /></a>
+                   <p class="category lightPara">Photography</p>
+                    <h3><a href='#'>Lorem ipsum dolor sit amet</a></h3>
+                   <hr class="miniHR">
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollisvolutpat sagittis. Ut aliquam luctus neque sit amet pharetra. </p>
+                   <p class="category lightPara">13 Nov 13</p>
+                   <div class="continue col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                       <p><a href='#'><strong>Continue Reading</strong></a></p>
+                   </div><!-- /.continue -->
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right icons">
+                       <i class="fa fa-heart" aria-hidden="true"></i> &nbsp; <i class="fa fa-exchange" aria-hidden="true"></i>
+                   </div><!-- /.icons -->
+               </div><!-- /.magazineBlock -->
+               
+               <!-- magazine block -->
+               <div class="magazineBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-6 col-xs-10 col-xs-offset-1">
+                   <a href='#'><img src="images/home/magazin2.png" alt="Magazin 1" /></a>
+                   <p class="category lightPara">Video</p>
+                   <h3><a href='#'>Lorem ipsum dolor sit amet</a></h3>
+                   <hr class="miniHR">
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollisvolutpat sagittis. Ut aliquam luctus neque sit amet pharetra. </p>
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis dui sed purus rhoncus, a eleifend arcu sodales. Aliquam eleifend, ipsum sit amet aliquet elementum, leo massa ultricies mauris, ac vulputate ex leo vel eros. In sed aliquam urna. Maecenas vestibulum magna at quam vulputate, at auctor orci volutpat.</p>
+                   <p class="category lightPara">13 Nov 13</p>
+                   <div class="continue col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                       <p><a href='#'><strong>Continue Reading</strong></a></p>
+                   </div><!-- /.continue -->
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right icons">
+                       <i class="fa fa-heart" aria-hidden="true"></i> &nbsp; <i class="fa fa-exchange" aria-hidden="true"></i>
+                   </div><!-- /.icons -->
+               </div><!-- /.magazineBlock -->
+               
+               <!-- magazine block -->
+               <div class="magazineBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 hidden-sm hidden-xs">
+                   <a href='#'><img src="images/home/magazin3.png" alt="Magazin 1" /></a>
+                   <p class="category lightPara">Blog</p>
+                   <h3><a href='#'>Lorem ipsum dolor sit amet</a></h3>
+                   <hr class="miniHR">
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollisvolutpat sagittis. Ut aliquam luctus neque sit amet pharetra. </p>
+                   <p class="category lightPara">13 Nov 13</p>
+                   <div class="continue col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                       <p><a href='#'><strong>Continue Reading</strong></a></p>
+                   </div><!-- /.continue -->
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right icons">
+                       <i class="fa fa-heart" aria-hidden="true"></i> &nbsp; <i class="fa fa-exchange" aria-hidden="true"></i>
+                   </div><!-- /.icons -->
+               </div><!-- /.magazineBlock -->
+               </div> <!-- /.row -->
+                <!-- bootstrap row -->
+               <div class="row">
+               <!-- magazine block -->
+                <div class="magazineBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-6 hidden-xs">
+                    <a href='#'><img src="images/home/magazin4.png" alt="Magazin 1" /></a>
+                   <p class="category lightPara">Photography</p>
+                    <h3><a href='#'>Lorem ipsum dolor sit amet</a></h3>
+                   <hr class="miniHR">
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollisvolutpat sagittis. Ut aliquam luctus neque sit amet pharetra. </p>
+                   <p class="category lightPara">13 Nov 13</p>
+                   <div class="continue col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                       <p><a href='#'><strong>Continue Reading</strong></a></p>
+                   </div><!-- /.continue -->
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right icons">
+                       <i class="fa fa-heart" aria-hidden="true"></i> &nbsp; <i class="fa fa-exchange" aria-hidden="true"></i>
+                   </div><!-- /.icons -->
+               </div><!-- /.magazineBlock -->
+               
+               <!-- magazine block -->
+               <div class="magazineBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-6 hidden-xs">
+                   <a href='#'><img src="images/home/magazin5.png" alt="Magazin 1" /></a>
+                   <p class="category lightPara">Video</p>
+                   <h3><a href='#'>Lorem ipsum dolor sit amet</a></h3>
+                   <hr class="miniHR">
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollisvolutpat sagittis. Ut aliquam luctus neque sit amet pharetra. </p>
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis dui sed purus rhoncus, a eleifend arcu sodales. Aliquam eleifend, ipsum sit amet aliquet elementum, leo massa ultricies mauris, ac vulputate ex leo vel eros. In sed aliquam urna. Maecenas vestibulum magna at quam vulputate, at auctor orci volutpat.</p>
+                   <p class="category lightPara">13 Nov 13</p>
+                   <div class="continue col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                       <p><a href='#'><strong>Continue Reading</strong></a></p>
+                   </div><!-- /.continue -->
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right icons">
+                       <i class="fa fa-heart" aria-hidden="true"></i> &nbsp; <i class="fa fa-exchange" aria-hidden="true"></i>
+                   </div><!-- /.icons -->
+               </div><!-- /.magazineBlock -->
+               
+               <!-- magazine block -->
+               <div class="magazineBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 hidden-xs hidden-sm">
+                   <a href='#'><img src="images/home/magazin6.png" alt="Magazin 1" /></a>
+                   <p class="category lightPara">Blog</p>
+                   <h3><a href='#'>Lorem ipsum dolor sit amet</a></h3>
+                   <hr class="miniHR">
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollisvolutpat sagittis. Ut aliquam luctus neque sit amet pharetra. </p>
+                   <p class="category lightPara">13 Nov 13</p>
+                   <div class="continue col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                       <p><a href='#'><strong>Continue Reading</strong></a></p>
+                   </div><!-- /.continue -->
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right icons">
+                       <i class="fa fa-heart" aria-hidden="true"></i> &nbsp; <i class="fa fa-exchange" aria-hidden="true"></i>
+                   </div><!-- /.icons -->
+               </div><!-- /.magazineBlock -->
+               </div> <!-- /.row -->
+           </div>
+       </div>
+    </div>
+    <!-- background bar sits in the middle of the div overlapping the div above -->
+       <div class="tourenTextures col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="debris"> 
+            <div class='col-lg-12'>
+                <div class="block"></div>
+            </div>
+        </div>
+    </div>
+    <!-- tourenEvents same as tourentipps.html -->
+<div class="tourenEvents col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      
+        <div class="tourenEventsInner col-lg-offset-0 col-lg-12 col-md-offset-1 col-md-10 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-center">
+            <h3 class="text-center">Check out our events</h3>
+            <!-- div:tourenCarousel is the carousel of events -->
+            <div id="tourenCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#tourenCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#tourenCarousel" data-slide-to="1"></li>
+                    <li data-target="#tourenCarousel" data-slide-to="2"></li>
+              </ol>
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                          <div class="carouselBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-12 col-xs-12 text-center">
+                              <a href='#'><img src="images/tourentipps/events1.png" alt="Events 1"></a>
+                              <p class="lightPara">Lorem ipsum dolor</p>
+                              <h4>Lorem ipsum dolor</h4>
+                              <p class="lightPara">Lorem ipsum dolor</p>
+                          </div>
+                          <div class="carouselBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-12 col-xs-12 text-center">
+                              <a href='#'><img  src="images/tourentipps/events2.png" alt="Events 2"></a>
+                              <p class="lightPara">Lorem ipsum dolor</p>
+                              <h4>Lorem ipsum dolor</h4>
+                              <p class="lightPara">Lorem ipsum dolor</p>
+                          </div>
+                          <div class="carouselBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-12 col-xs-12 text-center">
+                              <a href='#'><img  src="images/tourentipps/events3.png" alt="Events 3"></a>
+                              <p class="lightPara">Lorem ipsum dolor</p>
+                              <h4>Lorem ipsum dolor</h4>
+                              <p class="lightPara">Lorem ipsum dolor</p>
+                         </div>
+                    </div>
+                </div>
+                <div class="item">
+                   <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                    <div class="carouselBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-12 col-xs-12 text-center">
+                        <a href='#'><img src="images/tourentipps/events2.png" alt="Events 2"></a>
+                        <p class="lightPara">Lorem ipsum dolor</p>
+                        <h4>Lorem ipsum dolor</h4>
+                        <p class="lightPara">Lorem ipsum dolor</p>
+                   </div>
+                   <div class="carouselBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-12 col-xs-12 text-center">
+                       <a href='#'><img src="images/tourentipps/events3.png" alt="Events 3"></a>
+                        <p class="lightPara">Lorem ipsum dolor</p>
+                        <h4>Lorem ipsum dolor</h4>
+                        <p class="lightPara">Lorem ipsum dolor</p>
+                   </div>
+                   <div class="carouselBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-12 col-xs-12 text-center">
+                       <a href='#'><img src="images/tourentipps/events1.png" alt="Events 1"></a>
+                       <p class="lightPara">Lorem ipsum dolor</p>
+                       <h4>Lorem ipsum dolor</h4>
+                       <p class="lightPara">Lorem ipsum dolor</p>
+                   </div>
+                </div>
+          </div>
+          <div class="item">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <div class="carouselBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-12 col-xs-12 text-center">
+                    <a href='#'><img src="images/tourentipps/events3.png" alt="Events 3"></a>
+                    <p class="lightPara">Lorem ipsum dolor</p>
+                    <h4>Lorem ipsum dolor</h4>
+                    <p class="lightPara">Lorem ipsum dolor</p>
+               </div>
+               <div class="carouselBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-12 col-xs-12 text-center">
+                   <a href='#'><img src="images/tourentipps/events1.png" alt="Events 1"></a>
+                    <p class="lightPara">Lorem ipsum dolor</p>
+                    <h4>Lorem ipsum dolor</h4>
+                    <p class="lightPara">Lorem ipsum dolor</p>
+               </div>
+               <div class="carouselBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-12 col-xs-12 text-center">
+                   <a href='#'><img src="images/tourentipps/events2.png" alt="Events 2"></a>
+                    <p class="lightPara">Lorem ipsum dolor</p>
+                    <h4>Lorem ipsum dolor</h4>
+                    <p class="lightPara">Lorem ipsum dolor</p>
+               </div>
+            </div>
+      </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#tourenCarousel" role="button" data-slide="prev">
+    <i class="fa fa-angle-left" aria-hidden="true"></i>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#tourenCarousel" role="button" data-slide="next">
+    <i class="fa fa-angle-right" aria-hidden="true"></i>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+        </div>
+    </div>
+    
+    <!-- div class="magazine" same as on index.html -->
+    <div class="magazine lessTop col-lg-12 col-md-12 col-sm-12 col-xs-12">
+       <div class="magazineInner col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-10 col-sm-offset-1 col-xs-12">
+            <div class="magazineGrid col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              
+               <!-- bootstrap row -->
+               <div class="row">
+               <!-- magazine block -->
+                <div class="magazineBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-6 col-xs-10 col-xs-offset-1">
+                    <a href='#'><img src="images/home/magazin1.png" alt="Magazin 1" /></a>
+                   <p class="category lightPara">Photography</p>
+                    <h3><a href='#'>Lorem ipsum dolor sit amet</a></h3>
+                   <hr class="miniHR">
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollisvolutpat sagittis. Ut aliquam luctus neque sit amet pharetra. </p>
+                   <p class="category lightPara">13 Nov 13</p>
+                   <div class="continue col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                       <p><a href='#'><strong>Continue Reading</strong></a></p>
+                   </div><!-- /.continue -->
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right icons">
+                       <i class="fa fa-heart" aria-hidden="true"></i> &nbsp; <i class="fa fa-exchange" aria-hidden="true"></i>
+                   </div><!-- /.icons -->
+               </div><!-- /.magazineBlock -->
+               
+               <!-- magazine block -->
+               <div class="magazineBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-6 col-xs-10 col-xs-offset-1">
+                   <a href='#'><img src="images/home/magazin2.png" alt="Magazin 1" /></a>
+                   <p class="category lightPara">Video</p>
+                   <h3><a href='#'>Lorem ipsum dolor sit amet</a></h3>
+                   <hr class="miniHR">
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollisvolutpat sagittis. Ut aliquam luctus neque sit amet pharetra. </p>
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis dui sed purus rhoncus, a eleifend arcu sodales. Aliquam eleifend, ipsum sit amet aliquet elementum, leo massa ultricies mauris, ac vulputate ex leo vel eros. In sed aliquam urna. Maecenas vestibulum magna at quam vulputate, at auctor orci volutpat.</p>
+                   <p class="category lightPara">13 Nov 13</p>
+                   <div class="continue col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                       <p><a href='#'><strong>Continue Reading</strong></a></p>
+                   </div><!-- /.continue -->
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right icons">
+                       <i class="fa fa-heart" aria-hidden="true"></i> &nbsp; <i class="fa fa-exchange" aria-hidden="true"></i>
+                   </div><!-- /.icons -->
+               </div><!-- /.magazineBlock -->
+               
+               <!-- magazine block -->
+               <div class="magazineBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 hidden-sm hidden-xs">
+                   <a href='#'><img src="images/home/magazin3.png" alt="Magazin 1" /></a>
+                   <p class="category lightPara">Blog</p>
+                   <h3><a href='#'>Lorem ipsum dolor sit amet</a></h3>
+                   <hr class="miniHR">
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollisvolutpat sagittis. Ut aliquam luctus neque sit amet pharetra. </p>
+                   <p class="category lightPara">13 Nov 13</p>
+                   <div class="continue col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                       <p><a href='#'><strong>Continue Reading</strong></a></p>
+                   </div><!-- /.continue -->
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right icons">
+                       <i class="fa fa-heart" aria-hidden="true"></i> &nbsp; <i class="fa fa-exchange" aria-hidden="true"></i>
+                   </div><!-- /.icons -->
+               </div><!-- /.magazineBlock -->
+               </div> <!-- /.row -->
+                <!-- bootstrap row -->
+               <div class="row">
+               <!-- magazine block -->
+                <div class="magazineBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-6 hidden-xs">
+                    <a href='#'><img src="images/home/magazin4.png" alt="Magazin 1" /></a>
+                   <p class="category lightPara">Photography</p>
+                    <h3><a href='#'>Lorem ipsum dolor sit amet</a></h3>
+                   <hr class="miniHR">
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollisvolutpat sagittis. Ut aliquam luctus neque sit amet pharetra. </p>
+                   <p class="category lightPara">13 Nov 13</p>
+                   <div class="continue col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                       <p><a href='#'><strong>Continue Reading</strong></a></p>
+                   </div><!-- /.continue -->
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right icons">
+                       <i class="fa fa-heart" aria-hidden="true"></i> &nbsp; <i class="fa fa-exchange" aria-hidden="true"></i>
+                   </div><!-- /.icons -->
+               </div><!-- /.magazineBlock -->
+               
+               <!-- magazine block -->
+               <div class="magazineBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 col-sm-6 hidden-xs">
+                   <a href='#'><img src="images/home/magazin5.png" alt="Magazin 1" /></a>
+                   <p class="category lightPara">Video</p>
+                   <h3><a href='#'>Lorem ipsum dolor sit amet</a></h3>
+                   <hr class="miniHR">
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollisvolutpat sagittis. Ut aliquam luctus neque sit amet pharetra. </p>
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis dui sed purus rhoncus, a eleifend arcu sodales. Aliquam eleifend, ipsum sit amet aliquet elementum, leo massa ultricies mauris, ac vulputate ex leo vel eros. In sed aliquam urna. Maecenas vestibulum magna at quam vulputate, at auctor orci volutpat.</p>
+                   <p class="category lightPara">13 Nov 13</p>
+                   <div class="continue col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                       <p><a href='#'><strong>Continue Reading</strong></a></p>
+                   </div><!-- /.continue -->
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right icons">
+                       <i class="fa fa-heart" aria-hidden="true"></i> &nbsp; <i class="fa fa-exchange" aria-hidden="true"></i>
+                   </div><!-- /.icons -->
+               </div><!-- /.magazineBlock -->
+               
+               <!-- magazine block -->
+               <div class="magazineBlock col-lg-4 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-md-4 hidden-sm hidden-xs">
+                   <a href='#'><img src="images/home/magazin6.png" alt="Magazin 1" /></a>
+                   <p class="category lightPara">Blog</p>
+                   <h3><a href='#'>Lorem ipsum dolor sit amet</a></h3>
+                   <hr class="miniHR">
+                   <p class="lightPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollisvolutpat sagittis. Ut aliquam luctus neque sit amet pharetra. </p>
+                   <p class="category lightPara">13 Nov 13</p>
+                   <div class="continue col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                       <p><a href='#'><strong>Continue Reading</strong></a></p>
+                   </div><!-- /.continue -->
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right icons">
+                       <i class="fa fa-heart" aria-hidden="true"></i> &nbsp; <i class="fa fa-exchange" aria-hidden="true"></i>
+                   </div><!-- /.icons -->
+               </div><!-- /.magazineBlock -->
+               </div> <!-- /.row -->
+           </div>
+           <!-- Next page options -->
+           <!-- offset on large screens to appear on the right and centered on small screens -->
+           <div class="pages col-lg-4 col-lg-offset-8 col-md-4 col-md-offset-8 col-sm-12 col-xs-12 text-center">
+           <nav aria-label="Page navigation">
+              <ul class="pagination">
+                <li>
+                  <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&lang;</span>
+                  </a>
+                </li>
+                <li><a href="" class='active'>1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a>&ndash;</a></li>
+                <li><a href="#">7</a></li>
+                <li>
+                  <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&rang;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+           </div>
+        </div>
+    </div>
+  
+    <!-- Footer -->
+    <div class="footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <!-- Footer inner to hold content -->
+       <div class="footerInner col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+       <!-- Newsletter div holder -->
+        <div class="text-center newsletter col-lg-12 col-md-12 col-sm-12 col-xs-12">
+           <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                <h3>Sign up to our newsletter</h3>
+                <div class="col-lg-6 col-lg-offset-3 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                    <p class="lightPara footerPara category newsLetterPara">Subscribe to our newsletter to get latest discounts and special offers</p>
+                    <form action="" method="POST" class="newsletterForm">
+                       <div class="input-group">
+                          <input class="form-control" id="email" type="email" name="email" placeholder="Your Email" />
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                          </span> <!-- /.input-group-btn -->
+                       </div><!-- /.input-group -->
+                    </form> <!-- /.newsletterForm -->
+               </div> <!-- /.col-lg-6 -->
+           </div> <!-- /.col-lg-8 -->
+        </div><!-- /.newsletter -->
+        <!-- Content is split into three sections (.footerThree) - displayed side by side on desktop and collapsed on mobile -->
+        <div class="footerThree col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <!-- div:mobileSection will only show on mobile devices -->
+           <div class="mobileSection">
+               <img src="images/logo.png" alt="Back Counrty Guide Logo" /> &ndash; 
+               <div class="socialIcons">
+                    <i class="fa fa-instagram"></i> &nbsp;
+                    <i class="fa fa-facebook"></i> &nbsp;
+                    <i class="fa fa-twitter"></i>
+               </div> <!-- /.socilaIcons -->
+               <div class="partners">
+                <h5>Partners</h5> &ndash; 
+                <img src="images/footer/firstPartner.png" alt="Partner" /> &nbsp;
+                <img src="images/footer/secondPartner.png" alt="Partner" /> &nbsp;
+                <img src="images/footer/thirdPartner.png" alt="Partner" />
+            </div> <!-- /.partners -->
+           </div> <!-- /.mobileSection -->
+           <!-- Div:desktopSection will only show on desktop and tablet devices -->
+           <div class="desktopSection">
+            <img src="images/logo.png" alt="Back Counrty Guide Logo" />
+            <p class="footerPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci sapien, mollis non arcu et, aliquam egestas sem. Nullam dignissim, dui a sollicitudin fermentum, enim tellus rhoncus purus.</p>
+            <div class="socialIcons">
+                <i class="fa fa-instagram"></i> &nbsp;
+                <i class="fa fa-facebook"></i> &nbsp;
+                <i class="fa fa-twitter"></i>
+            </div> <!-- /.socialIcons -->
+            <div class="partners">
+                <h5>Partners</h5>
+                <img src="images/footer/firstPartner.png" alt="Partner" /> &nbsp;
+                <img src="images/footer/secondPartner.png" alt="Partner" /> &nbsp;
+                <img src="images/footer/thirdPartner.png" alt="Partner" />
+            </div> <!-- /.partners -->
+        </div> <!-- /.desktopSection -->
+        </div> <!-- /.footerThree -->
+        <div class="footerThree col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="footerLinks">
+                <h5>Information</h5>
+                <p><a href='#'>Customer serivce</a></p>
+                <p><a href='#'>Blog</a></p>
+                <p><a href='#'>Magazine</a></p>
+                <p><a href='#'>Events</a></p>
+                <p><a href='#'>Contact Us</a></p>
+                <p><a href='#'>Terms and conditions</a></p>
+                <div class="searchBar">
+                <form action="" method="POST" class="newsletterForm">
+                      <input id="search" type="search" name="search" placeholder="Search" />
+                </form>
+            </div> <!-- /.searchBar -->
+            </div> <!-- /.footerLinks -->
+        </div> <!-- /.footerThree -->
+        <div class="footerThree col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="languageOption">
+                <h5>Language</h5>
+                <p class="active language">EN</p>
+                <p class="language">DE</p>
+            </div> <!-- /.languageOption -->
+            <div class="payment">
+                <h5>Payments we accept</h5>
+                <div class="paymentImg">
+                    <img src="images/footer/payments.png" alt="Visa, Master Card, PayPal, Skrill" />
+                </div> <!-- /.paymentImg -->
+            </div> <!-- /.payment -->
+        </div> <!-- /.footerThree -->
+        <div class="copyright col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <hr>
+            <p>2017 - All rights Reserved</p>
+        </div> <!-- /.copyright -->
+    </div> <!-- /.footerInner -->
+    </div> <!-- /.footer -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        originalSrc = "images/logo-dark.png";
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/mapHighlight.js"></script>  
+    <script>
+    </script>
+  </body>
+</html>
