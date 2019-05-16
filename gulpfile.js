@@ -1,25 +1,25 @@
-var gulp = require('gulp'),
-  argv = require('yargs').argv,
-  browserify = require('browserify'),
-  browserSync = require('browser-sync'),
-  babelify = require('babelify'),
-  buffer = require('gulp-buffer'),
-  changed = require('gulp-changed'),
-  cp = require('child_process'),
-  debug = require('gulp-debug'),
-  gulpif = require('gulp-if'),
-  gutil = require('gulp-util'),
-  jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll',
-  prefix = require('gulp-autoprefixer'),
+var gulp = require("gulp"),
+  argv = require("yargs").argv,
+  browserify = require("browserify"),
+  browserSync = require("browser-sync"),
+  babelify = require("babelify"),
+  buffer = require("gulp-buffer"),
+  changed = require("gulp-changed"),
+  cp = require("child_process"),
+  debug = require("gulp-debug"),
+  gulpif = require("gulp-if"),
+  gutil = require("gulp-util"),
+  jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll",
+  prefix = require("gulp-autoprefixer"),
   reload = browserSync.reload,
   rename = require("gulp-rename"),
-  runSequence = require('run-sequence'),
-  sass = require('gulp-sass'),
-  sourcemaps = require('gulp-sourcemaps'),
-  tap = require('gulp-tap'),
-  uglify = require('gulp-uglify'),
-  svgmin = require('gulp-svgmin'),
-  imagemin = require('gulp-imagemin');
+  runSequence = require("gulp4-run-sequence"),
+  sass = require("gulp-sass"),
+  sourcemaps = require("gulp-sourcemaps"),
+  tap = require("gulp-tap"),
+  uglify = require("gulp-uglify"),
+  svgmin = require("gulp-svgmin"),
+  imagemin = require("gulp-imagemin");
 
 
 gulp.task('jekyll-build', function(done) {
@@ -75,6 +75,7 @@ gulp.task('javascripts', function() {
     // .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./assets/scripts'))
     .pipe(gulp.dest('./docs/assets/scripts'))
+    .pipe(reload({ stream: true }));
 });
 
 
@@ -101,6 +102,7 @@ gulp.task('stylesheets', function() {
       title: 'SCSS Compiled:'
     }))
     .pipe(gulp.dest('./assets/css'))
+    .pipe(reload({ stream: true }));
 });
 
 gulp.task('optimize_images', function() {
@@ -110,17 +112,18 @@ gulp.task('optimize_images', function() {
       title: 'Crunched:'
     }))
     .pipe(gulp.dest('./assets/images'))
+    .pipe(reload({ stream: true }));
 });
 
-gulp.task('watch', function() {
-  gulp.watch('./_scss/**/*.scss', ['stylesheets']);
-  gulp.watch('./node_modules/bootstrap/scss/bootstrap.scss', ['stylesheets']);
-  gulp.watch('./_scripts/**/*.js', ['javascripts']);
-  gulp.watch(['./docs/**/*']).on("change", reload);
+gulp.task("watch", function() {
+  gulp.watch("./_scss/**/*.scss", gulp.series("stylesheets"));
+  gulp.watch("./node_modules/bootstrap/scss/bootstrap.scss", gulp.series("stylesheets"));
+  gulp.watch("./_scripts/**/*.js", gulp.series("javascripts"));
+  gulp.watch(["./docs/**/*"]).on("change", reload);
 });
 
-gulp.task('server', function(callback) {
-  runSequence(['jekyll-build', 'dev-server', 'watch'], callback);
+gulp.task("server", function(callback) {
+  runSequence(["jekyll-build", "dev-server", "watch"], callback);
 });
 
 gulp.task('default', function() {
