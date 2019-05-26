@@ -22,6 +22,11 @@
 	{% include google-analytics.html %}
 	<link rel="stylesheet" href="/assets/css/styles.css">
 
+	{% if page.snippets %}
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+		<link rel="stylesheet" href="/assets/css/darcula-theme.css">
+	{% endif %}
+
 	<!-- Facebook -->
 	<meta property="og:url" content="http://elisweb.co.uk/{{ page.url }}" />
 	<meta property="og:title" content="{{ page.article_title }}" />

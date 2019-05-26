@@ -1,12 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700');
+@import url('https://fonts.googleapis.com/css?family=Suravaram|Work+Sans:400,700&display=swap');
 
 body {
-  font-family: 'Ubuntu Mono', monospace, 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background: #fafafa;
   color: #333;
   padding-top: 60px;
   @include media-breakpoint-up(sm) {
     padding-top: 30px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Suravaram', serif, 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+
+  p, li {
+    font-family: 'Work Sans', sans-serif, 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 }
 

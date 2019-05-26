@@ -109,7 +109,7 @@ pre[class*="language-"] {
 
 .token.string,
 .token.char {
-	color: #6a8759;
+	color: lightseagreen;
 }
 
 .token.attr-value,

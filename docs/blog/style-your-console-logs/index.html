@@ -5,14 +5,14 @@
 	<meta charset="utf-8">
   
 
-	<title>Glasgow Lives Article About Me | Eli Nathan</title>
+	<title>Style Your Console Logs | Eli Nathan</title>
 
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
 	<meta name="google-site-verification" content="Yu1Wu5yGnn9bd-FI_8YKvZR_y8cVnzSORhMwAtETy0s" />
 	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="amphtml" href="http://elisweb.co.uk/amp/blog/glasgow-lives-article-about-me/">
-	<link rel="canonical" href="https://elisweb.co.uk/blog/glasgow-lives-article-about-me/">
+	<link rel="amphtml" href="http://elisweb.co.uk/amp/blog/style-your-console-logs/">
+	<link rel="canonical" href="https://elisweb.co.uk/blog/style-your-console-logs/">
 
 	<!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,20 +32,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<link rel="stylesheet" href="/assets/css/styles.css">
 
 	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+		<link rel="stylesheet" href="/assets/css/darcula-theme.css">
+	
 
 	<!-- Facebook -->
-	<meta property="og:url" content="http://elisweb.co.uk//blog/glasgow-lives-article-about-me/" />
-	<meta property="og:title" content="Glasgow lives article about me" />
-	<meta property="og:description" content="Glasgow Lives is a "people's stories" segment fom Glasgow Live. They wrote a peice on me a few years ago." />
-	<meta property="og:image" content="http://elisweb.co.uk/assets/images/me-news.jpg" />
+	<meta property="og:url" content="http://elisweb.co.uk//blog/style-your-console-logs/" />
+	<meta property="og:title" content="Style your JS console logs" />
+	<meta property="og:description" content="Here's how to style your console logs so that you too can look like a complete d**k" />
+	<meta property="og:image" content="http://elisweb.co.uk/assets/images/console.log.gif" />
 
 	<!-- Twitter Cards -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@Twitter Name here" />
-	<meta name="twitter:url" content="http://elisweb.co.uk//blog/glasgow-lives-article-about-me/" />
-	<meta name="twitter:title" content="Glasgow lives article about me" />
-	<meta name="twitter:description" content="Glasgow Lives is a "people's stories" segment fom Glasgow Live. They wrote a peice on me a few years ago." />
-	<meta name="twitter:image" content="http://elisweb.co.uk/assets/images/me-news.jpg" />
+	<meta name="twitter:url" content="http://elisweb.co.uk//blog/style-your-console-logs/" />
+	<meta name="twitter:title" content="Style your JS console logs" />
+	<meta name="twitter:description" content="Here's how to style your console logs so that you too can look like a complete d**k" />
+	<meta name="twitter:image" content="http://elisweb.co.uk/assets/images/console.log.gif" />
 </head>
 
 <body>
@@ -105,12 +108,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<div class="col-md-8 offset-md-2">
 					<section>
 						<article class="article--post">
-		          <h1 class="article-title text-center">Glasgow lives article about me</h1>
+		          <h1 class="article-title text-center">Style your JS console logs</h1>
 							<p class="text-center">
-								<i class="fa fa-calendar" aria-hidden="true"></i> &nbsp; 16 August 2016 &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> &nbsp; Me
+								<i class="fa fa-calendar" aria-hidden="true"></i> &nbsp; 26 May 2019 &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> &nbsp; Code
 							</p>
-		          <img src="/assets/images/me-news.jpg" alt="Article featured image" class="img-fluid" />
-							<script>window.location.replace("https://www.glasgowlive.co.uk/news/glasgow-news/glasgow-lives-elijah-22-merchant-11758387");</script>
+		          <img src="/assets/images/console.log.gif" alt="Article featured image" class="img-fluid" />
+							<h3>But why?</h3>
+<p>
+  Why might you want to style your logs? Well it could be an innocent reason like Facebook (go have a look) or many companies who put a message there to try to drum up some recruitment leads for their development team...
+</p>
+<p>
+  It could also be cos you're a <strong>dick</strong> that wants some extra developer points. Like me 👀.
+</p>
+
+<h3>How?</h3>
+<p>When writing your console log, your first argument (which is usually just the text/variable you want to output) needs to contain "<code>%c</code>". For example: <code>console.log("%c Hello world!")</code>.</p>
+
+<p>The second argument, must be the CSS you want to use to stye your log. For example: </p>
+
+<pre><code class="language-js">console.log("%cHello world!", "background-color:#137886; color: white; padding: 5px; border-radius: 3px; font-family:verdana; font-weight:bold; margin: 20px;")</code></pre>
+
+<figure>
+  <figcaption>Your styled <code>console.log()</code> should now look like this:</figcaption>
+  <img src="/assets/images/log.png" alt="Styled console.log" class="img-fluid" />
+</figure>
+
+<p>You can keep adding to that so that different parts of your log have different styling but using more than one <code>%c</code> and more than one styling parameter.</p>
+<p>Like so:</p>
+
+<pre><code class="language-js">console.log("%c( ͡° ͜ʖ ͡°) %c¯\\_(ツ)_/¯", "background-color:#137886; color: white; padding: 5px; border-radius: 3px; margin: 5px;", "background-color:#861340; color: white; padding: 5px; border-radius: 3px; margin: 5px;")</code></pre>
+
+<figure>
+  <figcaption>Result:</figcaption>
+  <img src="/assets/images/log2.png" alt="Another styled console.log" class="img-fluid" />
+</figure>
+
+<p>Have fun!</p>
 
 						</article>
 					</section>
@@ -127,13 +160,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		            <h3>Share this post</h3>
 		          </div>
 		          <div class="col-sm-4">
-		            <a class="btn btn--facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//elisweb.co.uk/blog/glasgow-lives-article-about-me/" target="_blank">Facebook</a>
+		            <a class="btn btn--facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//elisweb.co.uk/blog/style-your-console-logs/" target="_blank">Facebook</a>
 		          </div>
 		          <div class="col-sm-4">
-		            <a class="btn btn--linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//elisweb.co.uk/blog/glasgow-lives-article-about-me/&title=Glasgow lives article about me&summary=&source=" target="_blank">LinkedIn</a>
+		            <a class="btn btn--linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//elisweb.co.uk/blog/style-your-console-logs/&title=Style your JS console logs&summary=&source=" target="_blank">LinkedIn</a>
 		          </div>
               <div class="col-sm-4">
-		            <a class="btn btn--twitter" href="https://twitter.com/home?status=http%3A//elisweb.co.uk/blog/glasgow-lives-article-about-me/" target="_blank">Twitter</a>
+		            <a class="btn btn--twitter" href="https://twitter.com/home?status=http%3A//elisweb.co.uk/blog/style-your-console-logs/" target="_blank">Twitter</a>
 		          </div>
 		        </div>
 		      </div>

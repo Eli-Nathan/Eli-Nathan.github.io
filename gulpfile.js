@@ -15,10 +15,8 @@ var gulp = require("gulp"),
   rename = require("gulp-rename"),
   runSequence = require("gulp4-run-sequence"),
   sass = require("gulp-sass"),
-  sourcemaps = require("gulp-sourcemaps"),
   tap = require("gulp-tap"),
   uglify = require("gulp-uglify"),
-  svgmin = require("gulp-svgmin"),
   imagemin = require("gulp-imagemin");
 
 
@@ -69,10 +67,6 @@ gulp.task('javascripts', function() {
       })
     )
     .pipe(buffer())
-    .pipe(sourcemaps.init({
-        loadMaps: true
-    }))
-    // .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./assets/scripts'))
     .pipe(gulp.dest('./docs/assets/scripts'))
     .pipe(reload({ stream: true }));

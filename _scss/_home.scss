@@ -1,7 +1,7 @@
 .intro-section {
   padding: $spacer 0;
   @include media-breakpoint-up(sm) {
-    padding: $spacer*3 0;
+    padding: $spacer*5 0;
   }
 
   .me-intro {
@@ -139,11 +139,12 @@
         }
 
         h4 {
-          font-size: 18px;
+          font-size: 22px;
         }
 
         p {
           font-size: 16px;
+          color: #979797;
         }
       }
     }

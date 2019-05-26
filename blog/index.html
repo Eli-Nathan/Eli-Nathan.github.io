@@ -1,0 +1,46 @@
+---
+layout: default
+title: Blog Elijah Nathan | Web design
+meta_description: Just some stuff I thought I'd write down about coding, marketing and me
+current: home
+---
+
+<div class="mt-5 pt-sm-5 pb-sm-3">
+  <div class="container">
+    <div class="row d-flex">
+      <div class="col-md-12 align-self-center me-intro">
+        <div class="row d-flex">
+          <div class="col-sm-12 align-self-center text-center">
+            <h1>Blog</h1>
+            <p>Just writing down some of the things in my head...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="blog-articles">
+  <div class="container">
+    <div class="row">
+      {% for post in site.posts %}
+      <div class="col-md-6 blog-articles__article">
+        <article>
+          <a href="{{post.url}}" class="card">
+            <div class="card__img">
+              <img src="/assets/images/{{post.image}}" alt="{{post.title}}" class="img-fluid" />
+            </div>
+            <div class="card__content p-3">
+              <h2>{{post.title}}</h2>
+              <p>{{post.excerpt}}</p>
+              <p>
+								<i class="fa fa-calendar" aria-hidden="true"></i> &nbsp; {{ post.date | date: "%-d %B %Y" }} &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> &nbsp; {{ post.tags | first | replace_first: '-', ' ' | capitalize }}
+							</p>
+            </div>
+          </a>
+        </article>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
