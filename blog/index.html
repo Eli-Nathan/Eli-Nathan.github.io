@@ -34,7 +34,7 @@ current: home
               <h2>{{post.title}}</h2>
               <p>{{post.excerpt}}</p>
               <p>
-								<i class="fa fa-calendar" aria-hidden="true"></i> &nbsp; {{ post.date | date: "%-d %B %Y" }} &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> &nbsp; {{ post.tags | first | replace_first: '-', ' ' | capitalize }}
+								<i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%-d %B %Y" }} &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> {{ post.tags | first | replace_first: '-', ' ' | capitalize }}
 							</p>
             </div>
           </a>
