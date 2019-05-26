@@ -2,7 +2,7 @@ name: Eli
 markdown: redcarpet
 highlighter: rouge
 exclude: ["node_modules", "gulpfile.js", "package.json",  "README.md", "_scripts", "_scss", "gemfile", "Gemfile.lock"]
-url: "http://elisweb.co.uk"
+url: "https://elisweb.co.uk"
 
 destination: docs
 
