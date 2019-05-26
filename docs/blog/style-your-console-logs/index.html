@@ -124,7 +124,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>How?</h3>
 <p>When writing your console log, your first argument (which is usually just the text/variable you want to output) needs to contain "<code>%c</code>". For example: <code>console.log("%c Hello world!")</code>.</p>
 
-<p>The second argument, must be the CSS you want to use to stye your log. For example: </p>
+<p>The second argument, must be the CSS you want to use to stye your log. For example: <code>console.log("%c Hello world!", "color: red;")</code></p>
+
+<h4>Full example:</h4>
 
 <pre><code class="language-js">console.log("%cHello world!", "background-color:#137886; color: white; padding: 5px; border-radius: 3px; font-family:verdana; font-weight:bold; margin: 20px;")</code></pre>
 
@@ -134,7 +136,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </figure>
 
 <p>You can keep adding to that so that different parts of your log have different styling but using more than one <code>%c</code> and more than one styling parameter.</p>
-<p>Like so:</p>
+<p>For example: <br /> <code>console.log("%cText1 %cText2", "styles for text1", "styles for text2")</code></p>
+
+<h4>Full example:</h4>
 
 <pre><code class="language-js">console.log("%c( ͡° ͜ʖ ͡°) %c¯\\_(ツ)_/¯", "background-color:#137886; color: white; padding: 5px; border-radius: 3px; margin: 5px;", "background-color:#861340; color: white; padding: 5px; border-radius: 3px; margin: 5px;")</code></pre>
 
