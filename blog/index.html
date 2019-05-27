@@ -32,7 +32,7 @@ current: home
             </div>
             <div class="card__content p-3">
               <h2>{{post.title}}</h2>
-              <p>{{post.excerpt}}</p>
+              <p class="excerpt">{{post.excerpt}}</p>
               <p>
 								<i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%-d %B %Y" }} &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> {{ post.tags | first | replace_first: '-', ' ' | capitalize }}
 							</p>

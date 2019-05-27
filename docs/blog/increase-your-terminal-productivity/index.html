@@ -40,7 +40,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<meta property="og:url" content="https://elisweb.co.uk//blog/increase-your-terminal-productivity/" />
 	<meta property="og:title" content="Increase your terminal productivity" />
 	<meta property="og:description" content="Find out how to increase your productivity using the terminal" />
-	<meta property="og:image" content="https://elisweb.co.uk/assets/images/console.log.gif" />
+	<meta property="og:image" content="https://elisweb.co.uk/assets/images/terminal-post.jpg" />
 
 	<!-- Twitter Cards -->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -48,7 +48,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<meta name="twitter:url" content="https://elisweb.co.uk//blog/increase-your-terminal-productivity/" />
 	<meta name="twitter:title" content="Increase your terminal productivity" />
 	<meta name="twitter:description" content="Find out how to increase your productivity using the terminal" />
-	<meta name="twitter:image" content="https://elisweb.co.uk/assets/images/console.log.gif" />
+	<meta name="twitter:image" content="https://elisweb.co.uk/assets/images/terminal-post.jpg" />
 </head>
 
 <body>
@@ -111,7 +111,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<p class="text-center">
 								<i class="fa fa-calendar" aria-hidden="true"></i> &nbsp; 27 May 2019 &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> &nbsp; Terminal
 							</p>
-		          <img src="/assets/images/console.log.gif" alt="Article featured image" class="img-fluid" />
+		          <img src="/assets/images/terminal-post.jpg" alt="Article featured image" class="img-fluid" />
 							<h3>The terminal</h3>
 <p>Most developers and designers use the terminal everyday but it can be tough to learn all the pre-written aliases that speed things up for you.</p>
 <p>
@@ -132,6 +132,95 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <figure class="highlight"><pre><code class="language-shell" data-lang="shell">brew install zsh</code></pre></figure>
 </section>
 
+<h3>Out of the box</h3>
+<p>Now that you have these three things installed, it is already easier to do a lot of stuff</p>
+<h4>Homebrew</h4>
+<p>As you saw above, installing applications is really simple with Homebrew. It's also as easy to update and remove them.</p>
+<h4>ZSH</h4>
+<p>Now that you're using ZSH, <code>auto_cd</code> will be enabled by default.</p>
+<p>This means that instead of typing <code>cd mydir/anotherdir</code>, you can omit the <code>cd</code> altogether.</p>
+<p>Tab completion should also be set up so if you start typing a command or a filepath, hit tab and options will be shown to autocomplete your command.</p>
+<h4>iTerm2 themes</h4>
+<p>You can customise iTerm2's themes so that they look pretty cool:</p>
+<img src="/assets/images/iterm2.png" alt="iTerm2 Theme"  class="img-fluid" />
+<p>Check out <a href="https://gist.github.com/kevin-smets/8568070" target="_blank">this link</a> for instructions on how to style yours.</p>
+
+
+<h3>Aliases</h3>
+<p>You may find yourself typing the same commands over and over again, maybe even a sequence of commands.</p>
+<p>Aliases allow you to write your string that will perform any given command.</p>
+
+<p>Now that you're using ZSH, in your home directory (<code>cd ~</code>) there will be a hidden file <code>.zshrc</code>.</p>
+
+<p>Open that file:</p>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">open ~/.zshrc</code></pre></figure>
+
+<p>In there you'll see a bunch of config code, most of it commented out. Have a look through it to see if there's anything in there you'd like to enable.</p>
+<p>Once you're done, scroll right to the bottom and you'll see some aliases.</p>
+<p>You'll now be able to write your own aliases using the following syntax.</p>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nb">alias </span>myaliasname <span class="o">=</span> <span class="s2">"command(s)"</span></code></pre></figure>
+
+<p>My own <code>.zshrc</code> file looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c"># Set personal aliases, overriding those provided by oh-my-zsh libs,</span>
+<span class="c"># plugins, and themes. Aliases can be placed here, though oh-my-zsh</span>
+<span class="c"># users are encouraged to define aliases within the ZSH_CUSTOM folder.</span>
+<span class="c"># For a full list of active aliases, run `alias`.</span>
+<span class="c">#</span>
+<span class="c"># Example aliases</span>
+<span class="c"># alias zshconfig="mate ~/.zshrc"</span>
+<span class="c"># alias ohmyzsh="mate ~/.oh-my-zsh"</span>
+
+<span class="nb">alias </span>installRun <span class="o">=</span> <span class="s2">"npm i &amp;&amp; npm run dev"</span>
+<span class="nb">alias ls</span> <span class="o">=</span> <span class="s2">"ls -a"</span>
+<span class="nb">alias </span>share <span class="o">=</span> <span class="s2">"php -S '10.54.4.120:3000'"</span></code></pre></figure>
+
+<p>You'll can see my <code>installRun</code> alias contains more than one command that I've strung together using the <code>&&</code> operator.</p>
+
+<h3>Git</h3>
+<p>I find the built in alias <code>gcam</code> particularly useful when commiting files to my git repositories.</p>
+<p>It means that instead of writing:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"My commit message"</span>
+git push</code></pre></figure>
+<p>I can simply write:</p>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">gcam <span class="s2">"My commit message"</span> <span class="o">&amp;&amp;</span> gp</code></pre></figure>
+
+<p>Some other useful built in aliases that speed up your git workflow:</p>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c"># Check the status of your working tree </span>
+gst <span class="o">[</span>git status]
+
+<span class="c"># Pull from origin</span>
+gl <span class="o">[</span>git pull]
+
+<span class="c"># Push to origin</span>
+gp <span class="o">[</span>git push]
+
+<span class="c"># Switch to branch</span>
+gco &lt;branchname&gt; <span class="o">[</span>git checkout &lt;branchname&gt;]
+
+<span class="c"># Switch to new branch</span>
+gcb branchname <span class="o">[</span>git checkout <span class="nt">-b</span> &lt;branchname&gt;]
+
+<span class="c"># Push new branch and set origin to a new branch of the same name</span>
+gpsup <span class="o">[</span>git push <span class="nt">--set-upstream</span> origin <span class="k">$(</span>current_branch<span class="k">)</span><span class="o">]</span>
+
+<span class="c"># Fetch origin</span>
+gfo <span class="o">[</span>git fetch origin]
+
+<span class="c"># Stage all changes</span>
+gaa <span class="o">[</span>git add <span class="nt">--all</span><span class="o">]</span>
+
+<span class="c"># Commit with message</span>
+gcmsg <span class="s2">"Your commit message"</span> <span class="o">[</span>git commit <span class="nt">-m</span> <span class="s2">"Your commit message"</span><span class="o">]</span>
+
+<span class="c"># Stage and commit everything in your working tree </span>
+gcam <span class="s2">"Your message here"</span> <span class="o">[</span>git add <span class="nt">--all</span> <span class="o">&amp;&amp;</span> cit commit <span class="nt">-m</span> <span class="s2">"Your message here"</span><span class="o">]</span></code></pre></figure>
+
+<p>The list of git aliases is huge so it's worth looking them up to decide which are most useful to you.</p>
+
+<p>Have fun!</p>
 
 
 

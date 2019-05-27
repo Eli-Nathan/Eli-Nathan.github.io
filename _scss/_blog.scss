@@ -81,7 +81,20 @@
     border-radius: 3px;
 
     img {
-      border-radius: 3px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+  }
+
+  h2 {
+    @include media-breakpoint-up(sm) {
+      height: 76px;
+    }
+  }
+
+  p.excerpt {
+    @include media-breakpoint-up(sm) {
+      height: 72px;
     }
   }
 }
