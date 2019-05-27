@@ -23,7 +23,9 @@ snippets: true
 
 <h4>Full example:</h4>
 
-<pre><code class="language-js">console.log("%cHello world!", "background-color:#137886; color: white; padding: 5px; border-radius: 3px; font-family:verdana; font-weight:bold; margin: 20px;")</code></pre>
+{% highlight javascript lineos %}
+console.log("%cHello world!", "background-color:#137886; color: white; padding: 5px; border-radius: 3px; font-family:verdana; font-weight:bold; margin: 20px;")
+{% endhighlight %}
 
 <figure>
   <figcaption>Your styled <code>console.log()</code> should now look like this:</figcaption>
@@ -35,7 +37,13 @@ snippets: true
 
 <h4>Full example:</h4>
 
-<pre><code class="language-js">console.log("%c( ͡° ͜ʖ ͡°) %c¯\\_(ツ)_/¯", "background-color:#137886; color: white; padding: 5px; border-radius: 3px; margin: 5px;", "background-color:#861340; color: white; padding: 5px; border-radius: 3px; margin: 5px;")</code></pre>
+{% highlight javascript lineos %}
+console.log(
+  "%c( ͡° ͜ʖ ͡°) %c¯\\_(ツ)_/¯",
+  "background-color:#137886; color: white; padding: 5px; border-radius: 3px; margin: 5px;",
+  "background-color:#861340; color: white; padding: 5px; border-radius: 3px; margin: 5px;"
+)
+{% endhighlight %}
 
 <figure>
   <figcaption>Result:</figcaption>
