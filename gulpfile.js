@@ -1,125 +1,117 @@
-var gulp = require("gulp"),
-  argv = require("yargs").argv,
-  browserify = require("browserify"),
-  browserSync = require("browser-sync"),
-  babelify = require("babelify"),
-  buffer = require("gulp-buffer"),
-  changed = require("gulp-changed"),
-  cp = require("child_process"),
-  debug = require("gulp-debug"),
-  gulpif = require("gulp-if"),
-  gutil = require("gulp-util"),
-  jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll",
-  prefix = require("gulp-autoprefixer"),
-  reload = browserSync.reload,
-  rename = require("gulp-rename"),
-  runSequence = require("gulp4-run-sequence"),
-  sass = require("gulp-sass"),
-  tap = require("gulp-tap"),
-  uglify = require("gulp-uglify"),
-  imagemin = require("gulp-imagemin");
+const argv = require('yargs').argv;
+const buffer = require('gulp-buffer');
+const connect = require('gulp-connect');
+const changed = require('gulp-changed');
+const debug = require('gulp-debug');
+const del = require('del');
+const gulp = require('gulp');
+const gulpif = require('gulp-if');
+const postcss = require('gulp-postcss');
+const browserSync = require('browser-sync');
+const sass = require('gulp-sass');
+const watch = require('gulp-watch');
+const reload = browserSync.reload;
+const browserify = require('browserify');
+const babelify = require('babelify');
+const tap = require('gulp-tap');
+const uglify = require('gulp-uglify');
 
+// Default settings for gulpfile
+var project = {
+  buildSrc: './src',
+  buildDest: './docs'
+};
 
-gulp.task('jekyll-build', function(done) {
-  return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--watch', '--incremental'], {
-      stdio: 'inherit'
-    })
-    .on('close', done);
+// Watch for file changes
+gulp.task('watch', done => {
+  // Watch SASS files and compile when changed
+  gulp.watch(
+    project.buildSrc + '/assets/stylesheets/**/*.scss',
+    gulp.series('stylesheets')
+  );
+
+  // Watch JS files and compile when changed
+  gulp.watch(
+    project.buildSrc + '/assets/scripts/**/*.js',
+    gulp.series('scripts')
+  );
+
+  /**
+    Using gulp-watch as standard gulp
+    doesn't track files the same way.
+    See: https://stackoverflow.com/questions/42890414/how-to-setup-gulp-watch-with-gulp-connect-livereload
+  */
+  watch(project.buildDest).pipe(connect.reload());
+
+  done();
 });
 
-
-gulp.task('dev-server', function() {
-  return browserSync({
-    server: {
-      baseDir: 'docs/'
-    }
-  });
-});
-
-gulp.task('share', function() {
-  return browserSync.init({
-    server: {
-      baseDir: "docs"
-    },
-    ghostMode: false
-  });
-});
-
-gulp.task('javascripts', function() {
-  return gulp.src(['./_scripts/**/*.js'])
-    .pipe(gulpif(!argv.force, changed('./assets/scripts', {
-      extension: '.js'
-    })))
+// Compile Scripts 
+gulp.task('scripts', done => {
+  gulp
+  .src(project.buildSrc + '/assets/scripts/bundle.js')
+    .pipe(
+      gulpif(
+        !argv.force,
+        changed('./assets/scripts', {
+          extension: '.js'
+        })
+      )
+    )
     .pipe(
       tap(function(file) {
         file.contents = browserify(file.path, {
           debug: true,
-          paths: ["./node_modules", "./assets/_scripts"]
+          paths: ['./node_modules', './assets']
         })
-        .transform(babelify, {
-          presets: ["@babel/preset-env", "@babel/preset-react"]
-        })
-        .bundle()
-        .on("error", function(err) {
-          console.log(err);
-          this.emit("end");
-        });
+          .transform(babelify, {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          })
+          .bundle()
+          .on('error', function(err) {
+            console.log(err);
+            this.emit('end');
+          });
+      })
+    )
+    .pipe(
+      debug({
+        title: 'JS: '
       })
     )
     .pipe(buffer())
-    .pipe(gulp.dest('./assets/scripts'))
-    .pipe(gulp.dest('./docs/assets/scripts'))
-    .pipe(reload({ stream: true }));
+    .pipe(uglify())
+    .pipe(gulp.dest(project.buildDest + '/assets/scripts'))
+    done();
 });
 
 
-gulp.task('stylesheets', function() {
-  return gulp.src(['./_scss/**/*.scss', './node_modules/bootstrap/scss/bootstrap.scss'])
-    // .pipe(gulpif(!argv.force, changed('./assets/css', {
-    //     extension: '.css'
-    // })))
-    .pipe(sass({
-      outputStyle: 'compressed',
-      includePaths: [
-        './_scss/',
-        './node_modules/bootstrap/scss/bootstrap.scss'
-      ]
-    })).on('error', function(err) {
-      browserSync.notify(err.message, 10000);
-      console.log(err);
-      this.emit('end');
-    })
-    .pipe(prefix(['last 15 versions', '> 5%'], {
-      cascade: true
-    }))
-    .pipe(debug({
-      title: 'SCSS Compiled:'
-    }))
-    .pipe(gulp.dest('./assets/css'))
-    .pipe(reload({ stream: true }));
+// Compile SASS
+gulp.task('stylesheets', done => {
+  gulp
+    .src(project.buildSrc + '/assets/stylesheets/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([require('autoprefixer')]))
+    .pipe(gulp.dest(project.buildDest + '/assets/stylesheets'))
+  done();
 });
 
-gulp.task('optimize_images', function() {
-  return gulp.src('./assets/assets/images/**/*.{jpg, bmp, gif, png, jpeg, svg}')
-    .pipe(imagemin())
-    .pipe(debug({
-      title: 'Crunched:'
-    }))
-    .pipe(gulp.dest('./assets/images'))
-    .pipe(reload({ stream: true }));
+// Lightweight development server
+gulp.task('server', done => {
+  connect.server({
+    root: project.buildDest,
+    livereload: true
+  });
+  done();
 });
 
-gulp.task("watch", function() {
-  gulp.watch("./_scss/**/*.scss", gulp.series("stylesheets"));
-  gulp.watch("./node_modules/bootstrap/scss/bootstrap.scss", gulp.series("stylesheets"));
-  gulp.watch("./_scripts/**/*.js", gulp.series("javascripts"));
-  gulp.watch(["./docs/**/*"]).on("change", reload);
+// Clean build dir
+gulp.task('clean', function() {
+  return del([project.buildDest + '/**/*']);
 });
 
-gulp.task("server", function(callback) {
-  runSequence(["jekyll-build", "dev-server", "watch"], callback);
-});
+// Build task
+gulp.task('build', gulp.parallel('clean', 'stylesheets', 'scripts'));
 
-gulp.task('default', function() {
-  console.log("try running 'gulp server'...");
-});
+// Development task
+gulp.task('dev', gulp.parallel('watch', 'stylesheets', 'scripts', 'server'));

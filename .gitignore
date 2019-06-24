@@ -4,9 +4,9 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
 
-/docs/Gemfile
+#Mac nonesense
+.DS_Store
 
 # Runtime data
 pids
@@ -44,7 +44,6 @@ typings/
 
 # Optional npm cache directory
 .npm
-.jekyll-metadata
 
 # Optional eslint cache
 .eslintcache
