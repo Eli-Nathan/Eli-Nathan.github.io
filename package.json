@@ -60,6 +60,7 @@
   "dependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
     "bootstrap": "^4.0.0",
+    "debug": "^4.1.1",
     "gulp-mamp": "0.0.5",
     "popper.js": "^1.14.1",
     "react": "^16.7.0",

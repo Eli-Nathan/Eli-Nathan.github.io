@@ -149,7 +149,7 @@ current: home
       <div class="col-sm-12 home-news__heading">
         <h3>Articles</h3>
       </div>
-      {% for post in site.posts limit:3 %} {% include partials/latest-news.html %} {% endfor %}
+      {% for post in collection.posts limit:3 %} {% include partials/latest-news.html %} {% endfor %}
     </div>
     <div class="row">
       <div class="col-sm-12 text-center">

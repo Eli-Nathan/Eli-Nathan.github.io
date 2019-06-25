@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/article",
+  "tags": "posts",
+  "permalink": "/blog/{{ article_title | slug | removeApostrophe }}/index.html"
+}

@@ -17,10 +17,12 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: "src/",
       output: "docs",
-      includes: "_includes"
+      includes: "_includes",
+      data: "_data"
     },
     templateFormats: ["html", "md", "liquid"],
     htmlTemplateEngine: "liquid",
+    markdownTemplateEngine: "liquid",
 
     // 1.1 Enable elventy to pass dirs specified above
     // passthroughFileCopy: true
