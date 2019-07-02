@@ -1,15 +1,15 @@
 <div class="col-md-4">
   <div class="news-card">
-    {% if post.external_url %}
-    <a href="{{ post.external_url }}" target="_blank" class="news-card__inner">
-    {% else %}
+  {% if post.data.external_url %}
+    <a href="{{ post.data.external_url }}" target="_blank" class="news-card__inner">
+  {% else %}
     <a href="{{ post.url }}" class="news-card__inner">
-      {% endif %}
-        <img src="/assets/images/{{ post.image }}"  alt="Article thumbnail" class="img-fluid">
-        <h4>{{ post.article_title }}</h4>
-        <p>
-          {{ post.excerpt }}
-        </p>
-      </a>
+  {% endif %}
+      <img src="/assets/images/{{ post.data.image }}"  alt="Article thumbnail" class="img-fluid">
+      <h4>{{ post.data.article_title }}</h4>
+      <p>
+        {{ post.data.excerpt }}
+      </p>
+    </a>
   </div>
 </div>

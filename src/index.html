@@ -66,7 +66,7 @@ current: home
       </div>
       <div class="col-sm-12 home-pf__cards text-center">
         <div class="row">
-          {% for work in site.works limit:6 %} {% include partials/home-pf.html %} {% endfor %}
+          {% for work in collections.works limit:6 %} {% include partials/home-pf.html %} {% endfor %}
         </div>
         <div class="col-sm-12 text-center">
           <script type="text/javascript">
@@ -149,7 +149,23 @@ current: home
       <div class="col-sm-12 home-news__heading">
         <h3>Articles</h3>
       </div>
-      {% for post in collection.posts limit:3 %} {% include partials/latest-news.html %} {% endfor %}
+      {% for post in collections.posts limit:3 %}
+      <div class="col-md-4">
+        <div class="news-card">
+          {% if post.data.external_url %}
+          <a href="{{ post.data.external_url }}" target="_blank" class="news-card__inner">
+          {% else %}
+          <a href="{{ post.url }}" class="news-card__inner">
+          {% endif %}
+            <img src="/assets/images/{{ post.data.image }}"  alt="Article thumbnail" class="img-fluid">
+            <h4>{{ post.data.article_title }}</h4>
+            <p>
+              {{ post.data.excerpt }}
+            </p>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
     </div>
     <div class="row">
       <div class="col-sm-12 text-center">

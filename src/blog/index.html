@@ -25,7 +25,7 @@ description: Just some stuff I thought I'd write down about coding, marketing an
       {% for post in collections.posts %}
       <div class="col-md-6 blog-articles__article">
         <article>
-          <a href="{{post.data.url}}" class="card">
+          <a href="{{post.url}}" class="card">
             <div class="card__img">
               <img src="/assets/images/{{post.data.image}}" alt="{{post.data.title}}" class="img-fluid" />
             </div>
@@ -33,7 +33,7 @@ description: Just some stuff I thought I'd write down about coding, marketing an
               <h2>{{post.data.title}}</h2>
               <p class="excerpt">{{post.data.excerpt}}</p>
               <p>
-								<i class="fa fa-calendar" aria-hidden="true"></i> {{ post.data.date | date: "%-d %B %Y" }} &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> {{ post.data.tags | first | replace_first: '-', ' ' | capitalize }}
+								<i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%d" | ordinal }} {{ post.date | date: "%B %Y" }} &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> {{ post.data.post_tags | first | replace_first: '-', ' ' | capitalize }}
 							</p>
             </div>
           </a>

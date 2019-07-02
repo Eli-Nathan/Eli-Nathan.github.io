@@ -8,9 +8,10 @@ module.exports = function (eleventyConfig) {
     return str.replace("'", "");
   });
 
-  // Ordinal date filter
-  eleventyConfig.addFilter("ordinal", function(date) {
-    return date + (date > 0 ? ['th', 'st', 'nd', 'rd'][(date > 3 && date < 21) || date % 10 > 3 ? 0 : date % 10] : '');
+  // Ordinal date
+  eleventyConfig.addFilter("ordinal", function (date) {
+    let newDate = date + (date > 0 ? ['th', 'st', 'nd', 'rd'][(date > 3 && date < 21) || date % 10 > 3 ? 0 : date % 10] : '');
+    return newDate.replace(/^0+/, '')
   });
 
   return {
