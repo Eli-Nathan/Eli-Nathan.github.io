@@ -9,10 +9,12 @@
 
 	<meta name="description" content="I am a freelance web designer and developer based here in Glasgow. Have a look at my portfolio and get in touch!">
 	<meta name="viewport" content="width=device-width">
-	<link rel="shortcut icon" href="/favicon.ico?v=2">
-	<link rel="canonical" href="https://elisweb.co.uk/social-cards/">
+	<meta name="google-site-verification" content="Yu1Wu5yGnn9bd-FI_8YKvZR_y8cVnzSORhMwAtETy0s" />
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="amphtml" href="https://elisweb.co.uk/amp/blog/glasgow-lives-article-about-me/">
+	<link rel="canonical" href="https://elisweb.co.uk/blog/glasgow-lives-article-about-me/">
 
-  <!-- Font Awesome -->
+	<!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- Google Tag Manager -->
@@ -28,7 +30,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 	<link rel="stylesheet" href="/assets/stylesheets/styles.css">
+
 	
+
+	<!-- Facebook -->
+	<meta property="og:url" content="https://elisweb.co.uk//blog/glasgow-lives-article-about-me/" />
+	<meta property="og:title" content="Glasgow lives article about me" />
+	<meta property="og:description" content="Glasgow Lives is a "people's stories" segment fom Glasgow Live. They wrote a peice on me a few years ago." />
+	<meta property="og:image" content="https://elisweb.co.uk/assets/images/me-news.jpg" />
+
+	<!-- Twitter Cards -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@Twitter Name here" />
+	<meta name="twitter:url" content="https://elisweb.co.uk//blog/glasgow-lives-article-about-me/" />
+	<meta name="twitter:title" content="Glasgow lives article about me" />
+	<meta name="twitter:description" content="Glasgow Lives is a "people's stories" segment fom Glasgow Live. They wrote a peice on me a few years ago." />
+	<meta name="twitter:image" content="https://elisweb.co.uk/assets/images/me-news.jpg" />
 </head>
 
 <body>
@@ -82,165 +99,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </nav>
 
+		<div class="container content-container">
+			<div class="row ">
+				<div class="col-md-8 offset-md-2">
+					<section>
+						<article class="article--post">
+		          <h1 class="article-title text-center">Glasgow lives article about me</h1>
+							<p class="text-center">
+								<!-- <i class="fa fa-calendar" aria-hidden="true"></i> &nbsp;  &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> &nbsp; Me -->
+							</p>
+		          <img src="/assets/images/me-news.jpg" alt="Article featured image" class="img-fluid" />
+							<script>window.location.replace("https://www.glasgowlive.co.uk/news/glasgow-news/glasgow-lives-elijah-22-merchant-11758387");</script>
 
-		
-<div class="container post-wrap">
-  <div class="row" data-container="posts">
-  </div>
-</div>
 
-<div class="container code-snippets">
-  <div class="row">
-    <div class="col-xs-12 col-md-10 offset-md-1 code-section">
-      <h2>View code</h2>
-      <h5>Data from json</h5>
-      <pre><code class="language-js">[{
-    "post_id": "001",
-    "user":"Joeseph Briggs",
-    "thumbnail":"/assets/images/users/user-1.jpg",
-    "content":"Would love to go here! 😍",
-    "image": "/assets/images/posts/travel.jpg",
-    "title": "The worlds best travel destinations",
-    "likes": 2,
-    "date": "04/01/2019",
-    "comments": 0,
-    "shares": 7
-  },
-  {
-    "post_id": "002",
-    "user":"Lois Adams",
-    "thumbnail":"/assets/images/users/user-2.jpg",
-    "content":"Cityscape photography at its best!",
-    "image": "/assets/images/posts/cityscape.jpg",
-    "title": "Cityscape gallery",
-    "likes": 4,
-    "date": "10/01/2019",
-    "comments": 0,
-    "shares": 2
-  }
-]
-</code></pre>
-      </div>
+							<div class="all-tags mt-4">
+								<h5>Tags:</h5>
+								<p>
+										
+											Me
+											
+									</p>
+						</article>
+					</section>
+				</div>
+		  </div>
+		</div>
 
-      <div class="col-xs-12 col-md-10 offset-md-1 code-section">
-        <h5>Main JS file</h5>
-        <pre><code class="language-js">// JS file
-import React from 'react'
-import ReactDOM from 'react-dom'
-import SocialCard from './SocialCard'
-
-// Get json data
-let request = new XMLHttpRequest()
-request.open('GET', 'path-to-data.json')
-request.responseType = 'json'
-request.send()
-
-// When data is returned...
-request.onload = function() {
-  // @Data returned
-  let data = request.response
-  // Loop through data
-  for(let i in data) {
-    // Post postsContainer
-    let postsContainer = document.querySelectorAll('[data-container="posts"]')
-
-    // Create a div...
-    let eachDiv = document.createElement("DIV")
-    // With Bootstrap classes
-    eachDiv.setAttribute("class", "col-md-8 offset-md-2")
-    // Add each created div to that container
-    postsContainer[0].appendChild(eachDiv)
-
-    // Render each div as a react component
-    ReactDOM.render( &#x3C;SocialCard data={data[i]} /&#x3E;, eachDiv )
-  }
-}</code></pre>
-    </div>
-
-    <div class="col-xs-12 col-md-10 offset-md-1 code-section">
-      <h5>Component JS file</h5>
-      <pre class="language-js"><code class="language-js">// Component JS file
-import React, {Component} from 'react';
-
-class SocialCard extends Component {
-  constructor(props) {
-    super(props);
-    this.toggleLike = this.toggleLike.bind(this)
-    // Set initial state for likes
-    this.state = {
-      likes: this.props.data['likes'],
-      likeClass: "interactions__icon interactions__icon--heart"
-    }
-  }
-
-  // Toggle like on/off function (Here we would update the data but for I'm just making a Recomponent now so I'll just toggle it on the front end)
-  toggleLike() {
-    // If the state is equal to the data then the user has not liked
-    if(this.state.likes == this.props.data['likes']) {
-      // change the state to reflect the user's like
-      this.setState({
-        likes: this.props.data['likes'] + 1,
-        likeClass: "interactions__icon interactions__icon--heart-liked"
-      })
-    }
-
-    // Otherwise...
-    else {
-      // Reset like amounts to data value
-      this.setState({
-        likes: this.state.likes - 1,
-        likeClass: "interactions__icon interactions__icon--heart"
-      })
-    }
-  }
-
-  render() {
-  return (
-      &#x3C;div className=&#x22;card&#x22;&#x3E;
-        &#x3C;div className=&#x22;card__user&#x22;&#x3E;
-          &#x3C;img
-            src={this.props.data[&#x27;thumbnail&#x27;]}
-            alt={this.props.data[&#x27;user&#x27;]}
-            className=&#x22;profile-pic&#x22;
-          /&#x3E;
-          &#x3C;h5&#x3E;{this.props.data[&#x27;user&#x27;]}&#x3C;/h5&#x3E;
-        &#x3C;/div&#x3E;
-        &#x3C;div className=&#x22;card__post&#x22;&#x3E;
-          &#x3C;p&#x3E;{this.props.data[&#x27;content&#x27;]}&#x3C;/p&#x3E;
-        &#x3C;/div&#x3E;
-        &#x3C;div className=&#x22;card__image&#x22;&#x3E;
-          &#x3C;img
-            src={this.props.data[&#x27;image&#x27;]}
-            alt=&#x22;Image alt text&#x22;
-          /&#x3E;
-        &#x3C;/div&#x3E;
-        &#x3C;div className=&#x22;card__info&#x22;&#x3E;
-          &#x3C;h4&#x3E;{this.props.data[&#x27;title&#x27;]}&#x3C;/h4&#x3E;
-          &#x3C;h6&#x3E;{this.props.data[&#x27;date&#x27;]}&#x3C;/h6&#x3E;
-          &#x3C;div className=&#x22;interactions&#x22;&#x3E;
-            &#x3C;button
-              className={this.state.likeClass}
-              onClick={this.toggleLike}
-            &#x3E;
-              {this.state.likes}
-            &#x3C;/button&#x3E;
-            &#x3C;button className=&#x22;interactions__icon interactions__icon--comments&#x22;&#x3E;
-              0
-            &#x3C;/button&#x3E;
-            &#x3C;button className=&#x22;interactions__icon interactions__icon--share&#x22;&#x3E;
-              0
-            &#x3C;/button&#x3E;
-          &#x3C;/div&#x3E;
-        &#x3C;/div&#x3E;
-      &#x3C;/div&#x3E;
-    );
-  }
-}
-
-export default SocialCard;</code></pre>
-  </div>
-</div>
-
+		<div class="sharer">
+		  <div class="container content-container">
+		  	<div class="row">
+		      <div class="col-xs-12 col-md-8 offset-md-2 bg-white sharer-card">
+		        <div class="row">
+		          <div class="col-sm-12">
+		            <h3>Share this post</h3>
+		          </div>
+		          <div class="col-sm-4">
+		            <a class="btn btn--facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//elisweb.co.uk/blog/glasgow-lives-article-about-me/" target="_blank">Facebook</a>
+		          </div>
+		          <div class="col-sm-4">
+		            <a class="btn btn--linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//elisweb.co.uk/blog/glasgow-lives-article-about-me/&title=Glasgow lives article about me&summary=&source=" target="_blank">LinkedIn</a>
+		          </div>
+              <div class="col-sm-4">
+		            <a class="btn btn--twitter" href="https://twitter.com/home?status=http%3A//elisweb.co.uk/blog/glasgow-lives-article-about-me/" target="_blank">Twitter</a>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 
 		<footer class="footer">
   <div class="container">
@@ -299,11 +205,9 @@ export default SocialCard;</code></pre>
   </div>
 </footer>
 
-
-	 <script type="text/javascript" async="" src="https://google-analytics.com/ga.js"></script>
+		 <script type="text/javascript" async="" src="https://google-analytics.com/ga.js"></script>
  <script src="/assets/scripts/scripts.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
-
 
 </body>
 

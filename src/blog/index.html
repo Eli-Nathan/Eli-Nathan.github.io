@@ -22,18 +22,18 @@ description: Just some stuff I thought I'd write down about coding, marketing an
 <div class="blog-articles">
   <div class="container">
     <div class="row">
-      {% for post in site.posts %}
+      {% for post in collections.posts %}
       <div class="col-md-6 blog-articles__article">
         <article>
-          <a href="{{post.url}}" class="card">
+          <a href="{{post.data.url}}" class="card">
             <div class="card__img">
-              <img src="/assets/images/{{post.image}}" alt="{{post.title}}" class="img-fluid" />
+              <img src="/assets/images/{{post.data.image}}" alt="{{post.data.title}}" class="img-fluid" />
             </div>
             <div class="card__content p-3">
-              <h2>{{post.title}}</h2>
-              <p class="excerpt">{{post.excerpt}}</p>
+              <h2>{{post.data.title}}</h2>
+              <p class="excerpt">{{post.data.excerpt}}</p>
               <p>
-								<i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%-d %B %Y" }} &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> {{ post.tags | first | replace_first: '-', ' ' | capitalize }}
+								<i class="fa fa-calendar" aria-hidden="true"></i> {{ post.data.date | date: "%-d %B %Y" }} &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> {{ post.data.tags | first | replace_first: '-', ' ' | capitalize }}
 							</p>
             </div>
           </a>
