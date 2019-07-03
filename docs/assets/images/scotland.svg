@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="699px" height="472px" viewBox="0 0 699 472" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>scotland</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-17.3%" y="-26.5%" width="134.7%" height="153.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="12" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="17" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0987489073 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="scotland" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g filter="url(#filter-1)" transform="translate(93.000000, 68.000000)" fill-rule="nonzero" id="Path">
+            <path d="M503.172,0.276 L8.828,0.276 C3.953,0.276 0,4.228 0,9.103 L0,326.896 C0,331.771 3.953,335.724 8.828,335.724 L503.173,335.724 C508.048,335.724 512.001,331.771 512.001,326.896 L512.001,9.103 C512,4.228 508.047,0.276 503.172,0.276 Z" fill="#4173CD"></path>
+            <path d="M512,9.103 C512,4.228 508.047,0.275 503.172,0.275 L463.671,0.275 L256,136.337 L48.329,0.276 L8.828,0.276 C3.953,0.276 0,4.228 0,9.103 L0,31.939 L207.671,168 L0,304.061 L0,326.897 C0,331.772 3.953,335.725 8.828,335.725 L48.329,335.725 L256,199.663 L463.671,335.724 L503.172,335.724 C508.047,335.724 512,331.771 512,326.896 L512,304.06 L304.329,168 L512,31.939 L512,9.103 Z" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
