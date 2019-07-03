@@ -1,6 +1,6 @@
 ---
 layout: layouts/default
-title: Blog Elijah Nathan | Web design
+title: Blog | Elijah Nathan
 description: Just some stuff I thought I'd write down about coding, marketing and me
 ---
 
@@ -27,10 +27,10 @@ description: Just some stuff I thought I'd write down about coding, marketing an
         <article>
           <a href="{{post.url}}" class="card">
             <div class="card__img">
-              <img src="/assets/images/{{post.data.image}}" alt="{{post.data.title}}" class="img-fluid" />
+              <img src="/assets/images/{{post.data.image}}" alt="{{post.data.article_title}}" class="img-fluid" />
             </div>
             <div class="card__content p-3">
-              <h2>{{post.data.title}}</h2>
+              <h2>{{post.data.article_title}}</h2>
               <p class="excerpt">{{post.data.excerpt}}</p>
               <p>
 								<i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%d" | ordinal }} {{ post.date | date: "%B %Y" }} &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> {{ post.data.post_tags | first | replace_first: '-', ' ' | capitalize }}

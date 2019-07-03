@@ -49,7 +49,7 @@ gulp.task('watch', done => {
 // Compile Scripts 
 gulp.task('scripts', done => {
   gulp
-  .src(project.buildSrc + '/assets/scripts/bundle.js')
+  .src(project.buildSrc + '/assets/scripts/scripts.js')
     .pipe(
       gulpif(
         !argv.force,

@@ -39,6 +39,7 @@
     "gulp-watch": "^5.0.1",
     "gulp-uglify": "*",
     "html-minifier": "^3.5.21",
+    "jquery": "^3.3.1",
     "lepto-cli": "*",
     "lepto-resize": "*",
     "purgecss": "^1.1.0",
