@@ -6,7 +6,7 @@
   "scripts": {
     "start": "rsync --progress -r -u src/assets/images docs/assets && npm run dev",
     "dev": "concurrently \"eleventy --watch \" \"gulp dev --color\"",
-    "build": "gulp build && eleventy && purgecss --config ./purgecss.config.js --out docs/assets/styles && eleventy && lepto"
+    "build": "gulp build && eleventy docs/assets/styles && eleventy"
   },
   "author": "Eli Nathan",
   "license": "ISC",
