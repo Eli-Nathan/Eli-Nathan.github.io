@@ -22,7 +22,7 @@ description: Just some stuff I thought I'd write down about coding, marketing an
 <div class="blog-articles">
   <div class="container">
     <div class="row">
-      {% for post in collections.posts %}
+      {% for post in collections.posts reversed %}
       <div class="col-md-6 blog-articles__article">
         <article>
           <a href="{{post.url}}" class="card">
