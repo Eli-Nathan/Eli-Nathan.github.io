@@ -6805,6 +6805,24 @@ nav.navbar {
   @media (min-width: 576px) {
     .card p.excerpt {
       height: 72px; } }
+  @media (min-width: 576px) {
+    .card--home h2 {
+      height: auto; } }
+  @media (min-width: 768px) {
+    .card--home h2 {
+      height: 120px; } }
+  @media (min-width: 992px) {
+    .card--home h2 {
+      height: 80px; } }
+  @media (min-width: 576px) {
+    .card--home p.excerpt {
+      height: auto; } }
+  @media (min-width: 768px) {
+    .card--home p.excerpt {
+      height: 120px; } }
+  @media (min-width: 992px) {
+    .card--home p.excerpt {
+      height: 100px; } }
 
 .all-tags {
   text-align: center; }

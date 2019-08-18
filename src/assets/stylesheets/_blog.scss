@@ -97,6 +97,36 @@
       height: 72px;
     }
   }
+
+  &--home {
+    h2 {
+      @include media-breakpoint-up(sm) {
+        height: auto;
+      }
+
+      @include media-breakpoint-up(md) {
+        height: 120px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        height: 80px;
+      }
+    }
+
+    p.excerpt {
+      @include media-breakpoint-up(sm) {
+        height: auto;
+      }
+
+      @include media-breakpoint-up(md) {
+        height: 120px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        height: 100px;
+      }
+    }
+  }
 }
 
 .all-tags {

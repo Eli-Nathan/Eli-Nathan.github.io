@@ -149,21 +149,23 @@ current: home
       <div class="col-sm-12 home-news__heading">
         <h3>Articles</h3>
       </div>
-      {% for post in collections.posts limit:3 %}
-      <div class="col-md-4">
-        <div class="news-card">
-          {% if post.data.external_url %}
-          <a href="{{ post.data.external_url }}" target="_blank" class="news-card__inner">
-          {% else %}
-          <a href="{{ post.url }}" class="news-card__inner">
-          {% endif %}
-            <img src="/assets/images/{{ post.data.image }}"  alt="Article thumbnail" class="img-fluid">
-            <h4>{{ post.data.article_title }}</h4>
-            <p>
-              {{ post.data.excerpt }}
-            </p>
+      {% assign arr = collections.posts | reverse %}
+      {% for post in arr limit:3 %}
+      <div class="col-md-4 blog-articles__article">
+        <article>
+          <a href="{{post.url}}" class="card card--home">
+            <div class="card__img">
+              <img src="/assets/images/{{post.data.image}}" alt="{{post.data.article_title}}" class="img-fluid" />
+            </div>
+            <div class="card__content p-3">
+              <h2>{{post.data.article_title}}</h2>
+              <p class="excerpt">{{post.data.excerpt}}</p>
+              <p>
+                <i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%b %Y" }} &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> {{ post.data.post_tags | first | replace_first: '-', ' ' | capitalize }}
+              </p>
+            </div>
           </a>
-        </div>
+        </article>
       </div>
       {% endfor %}
     </div>
