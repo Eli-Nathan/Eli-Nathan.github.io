@@ -48,7 +48,7 @@
     "resolve-url-loader": "^2.2.1",
     "sass-lint": "^1.12.1",
     "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.1",
+    "webpack-cli": "^3.3.12",
     "webpack-stream": "^5.2.1",
     "yargs": "^13.2.4"
   },
