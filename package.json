@@ -1,75 +1,62 @@
 {
-  "name": "bootstrap",
-  "version": "1.0.0",
-  "description": "Eleventy/Gulp project to maintain my own website.",
-  "main": "gulpfile.js",
-  "scripts": {
-    "start": "rsync --progress -r -u src/assets/images docs/assets && npm run dev",
-    "dev": "concurrently \"eleventy --watch \" \"gulp dev --color\"",
-    "build": "gulp build && rsync --progress -r -u src/assets/images docs/assets && eleventy docs/assets/styles && eleventy"
-  },
-  "author": "Eli Nathan",
-  "license": "ISC",
-  "devDependencies": {
-    "@11ty/eleventy": "^0.8.1",
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
-    "@babel/preset-react": "^7.0.0",
-    "autoprefixer": "^9.4.7",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.5",
-    "babelify": "*",
-    "browserify": "*",
-    "clean-css": "^4.2.1",
-    "concurrently": "^4.1.0",
-    "del": "^3.0.0",
-    "eslint": "^5.16.0",
-    "eslint-loader": "^2.1.2",
-    "express": "~4.16.2",
-    "glob": "^7.1.4",
-    "gulp": "^4.0.1",
-    "gulp-buffer": "*",
-    "gulp-connect": "^5.7.0",
-    "gulp-changed": "*",
-    "gulp-debug": "*",
-    "gulp-if": "*",
-    "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-tap": "*",
-    "gulp-watch": "^5.0.1",
-    "gulp-uglify": "*",
-    "html-minifier": "^3.5.21",
-    "jquery": "^3.3.1",
-    "lepto-cli": "*",
-    "lepto-resize": "*",
-    "purgecss": "^1.1.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "resolve-url-loader": "^2.2.1",
-    "sass-lint": "^1.12.1",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.1",
-    "webpack-stream": "^5.2.1",
-    "yargs": "^13.2.4"
-  },
-  "keywords": [
-    "eleventy",
-    "gulp",
-    "sass",
-    "browsersync"
-  ],
-  "dependencies": {
-    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
-    "bootstrap": "^4.0.0",
-    "debug": "^4.1.1",
-    "gulp-mamp": "0.0.5",
-    "popper.js": "^1.14.1",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "server": "^1.0.18"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Eli-Nathan.git/Eli-Nathan.github.io/"
-  }
+    "name": "elisweb",
+    "version": "1.0.0",
+    "description": "Eleventy project to maintain my own website.",
+    "author": "Eli Nathan",
+    "license": "ISC",
+    "scripts": {
+        "start": "run-p serve:eleventy watch:parcel",
+        "serve:eleventy": "cross-env ELEVENTY_ENV=local eleventy --serve",
+        "watch:parcel": "run-p watch:css watch:js watch:images",
+        "watch:css": "parcel watch ./src/scss/main.scss --dist-dir ./docs/css",
+        "watch:js": "parcel watch ./src/js/main.js --dist-dir ./docs/js",
+        "watch:images": "parcel watch ./src/assets/images/**/*",
+        "build": "run-s clean build:parcel build:eleventy",
+        "build:eleventy": "cross-env ELEVENTY_ENV=production eleventy",
+        "build:parcel": "run-p build:css build:js build:images",
+        "build:css": "parcel build ./src/scss/main.scss --dist-dir ./docs/css",
+        "build:js": "parcel build ./src/js/main.js --dist-dir ./docs/js",
+        "build:images": "parcel build src/assets/img/*",
+        "clean": "rm -rf dist"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/webpixels/bootstrap-starter-kit.git"
+    },
+    "bugs": {
+        "url": "https://github.com/webpixels/bootstrap-starter-kit/issues"
+    },
+    "homepage": "https://github.com/webpixels/bootstrap-starter-kit#readme",
+    "keywords": [
+        "webpixels",
+        "eleventy",
+        "11ty",
+        "bootstrap",
+        "css",
+        "sass",
+        "js",
+        "mobile-first",
+        "responsive",
+        "front-end",
+        "web",
+        "utilities"
+    ],
+    "devDependencies": {
+        "@11ty/eleventy": "^1.0.0",
+        "@parcel/transformer-sass": "^2.2.1",
+        "autoprefixer": "^10.4.2",
+        "cross-env": "^7.0.3",
+        "html-minifier": "^4.0.0",
+        "npm-run-all": "^4.1.5",
+        "nunjucks": "^3.2.3",
+        "parcel": "^2.2.1",
+        "postcss": "^8.4.5",
+        "sass": "^1.49.0"
+    },
+    "dependencies": {
+        "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+        "@popperjs/core": "^2.11.2",
+        "@webpixels/css": "^1.1.9",
+        "bootstrap": "^5.1.3"
+    }
 }

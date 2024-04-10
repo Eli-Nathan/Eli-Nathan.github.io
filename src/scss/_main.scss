@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700");
+@import url("https://fonts.googleapis.com/css?family=Suravaram|Work+Sans:400,700&display=swap");
+
+body {
+	background: #fafafa;
+	color: #333;
+	padding-top: 60px;
+	@include media-breakpoint-up(sm) {
+		padding-top: 30px;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: "Suravaram", serif, "Roboto", -apple-system, BlinkMacSystemFont,
+			"Segoe UI", Roboto Helvetica, Arial, sans-serif, "Apple Color Emoji",
+			"Segoe UI Emoji", "Segoe UI Symbol";
+	}
+
+	p,
+	li {
+		font-family: "Work Sans", sans-serif, "Roboto", -apple-system,
+			BlinkMacSystemFont, "Segoe UI", Roboto Helvetica, Arial, sans-serif,
+			"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	}
+}
+
+.four-o-four-container {
+	h1 {
+		font-size: 120px;
+	}
+	background: $green url("../assets/images/404-cow.svg") no-repeat center top /
+		100px;
+	text-align: center;
+	padding: 60px 14px;
+	padding-top: 200px;
+	margin-bottom: 30px;
+	color: #fff;
+	@include media-breakpoint-up(sm) {
+		background: $green url("../assets/images/404-cow.svg") no-repeat right top /
+			contain;
+		text-align: left;
+		padding: 100px 0;
+	}
+	@include media-breakpoint-up(md) {
+		background-position: right 100px top;
+		br {
+			display: none;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		background-position: right 300px top;
+		br {
+			display: block;
+		}
+	}
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 700;
+}
+
+h5,
+h6,
+p,
+li {
+	font-weight: 400;
+}
+
+a {
+	color: $green;
+}
+
+.btn {
+	&--default {
+		background: $red;
+		color: $white;
+
+		&:hover {
+			color: #fff;
+			background: darken($red, 10%);
+		}
+	}
+
+	&--secondary {
+		background: $green;
+		color: $white;
+
+		&:hover {
+			color: #fff;
+			background: darken($green, 10%);
+		}
+	}
+
+	&--white {
+		background: $white;
+		color: #333;
+
+		&:hover {
+			color: #333;
+			background: darken($white, 10%);
+		}
+	}
+
+	&--facebook {
+		border: 1px solid #3b5998;
+		color: #333;
+
+		&:hover {
+			color: #fff;
+			background: #3b5998;
+		}
+	}
+
+	&--linkedin {
+		border: 1px solid #0077b5;
+		color: #333;
+
+		&:hover {
+			color: #fff;
+			background: #0077b5;
+		}
+	}
+
+	&--twitter {
+		border: 1px solid #1da1f2;
+		color: #333;
+
+		&:hover {
+			color: #fff;
+			background: #1da1f2;
+		}
+	}
+}

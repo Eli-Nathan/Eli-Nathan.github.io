@@ -4,42 +4,50 @@ title: Blog | Elijah Nathan
 description: Just some stuff I thought I'd write down about coding, marketing and me
 ---
 
-<div class="mt-5 pt-sm-5 pb-sm-3">
-  <div class="container">
-    <div class="row d-flex">
-      <div class="col-md-12 align-self-center me-intro">
-        <div class="row d-flex">
-          <div class="col-sm-12 align-self-center text-center">
-            <h1>Blog</h1>
-            <p>Just writing down some of the things in my head...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="mt-5 pb-sm-3 blog-container">
+	<div class="container">
+		<div class="row d-flex">
+			<div class="col-md-12 align-self-center me-intro">
+				<div class="row d-flex">
+					<div class="col-sm-12 align-self-center text-center">
+						<h1>Blog</h1>
+						<p>Just writing down some of the things in my head...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="blog-articles">
-  <div class="container">
-    <div class="row">
-      {% for post in collections.posts %}
-      <div class="col-md-6 blog-articles__article">
-        <article>
-          <a href="{{post.url}}" class="card">
-            <div class="card__img">
-              <img src="/assets/images/{{post.data.image}}" alt="{{post.data.article_title}}" class="img-fluid" />
-            </div>
-            <div class="card__content p-3">
-              <h2>{{post.data.article_title}}</h2>
-              <p class="excerpt">{{post.data.excerpt}}</p>
-              <p>
-								<i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%d" | ordinal }} {{ post.date | date: "%B %Y" }} &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> {{ post.data.post_tags | first | replace_first: '-', ' ' | capitalize }}
+	<div class="container">
+		<div class="row">
+			{% for post in collections.posts %}
+			<div class="col-md-6 blog-articles__article">
+				<article>
+					<a href="{{post.url}}" class="card">
+						<div class="card__img">
+							<img
+								src="/assets/images/{{post.data.image}}"
+								alt="{{post.data.article_title}}"
+								class="img-fluid"
+							/>
+						</div>
+						<div class="card__content p-3">
+							<h2>{{post.data.article_title}}</h2>
+							<p class="excerpt">{{post.data.excerpt}}</p>
+							<p>
+								<i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date |
+								date: "%d" | ordinal }} {{ post.date | date: "%B %Y" }} &nbsp;
+								&nbsp; <i class="fa fa-tag" aria-hidden="true"></i> {{
+								post.data.post_tags | first | replace_first: '-', ' ' |
+								capitalize }}
 							</p>
-            </div>
-          </a>
-        </article>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
+						</div>
+					</a>
+				</article>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
 </div>

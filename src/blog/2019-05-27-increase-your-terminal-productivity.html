@@ -1,0 +1,154 @@
+---
+layout: layouts/article
+article_title: Increase your terminal productivity
+meta-description: Increase your terminal productivity with aliases. Find out how!
+excerpt: Find out how to increase your productivity using the terminal
+image: terminal-post.jpg
+tags: posts
+post_tags: [Terminal, Productivity, zsh, shell, aliases, git, iTerm2, Homebrew]
+snippets: true
+permalink: "/blog/{{ article_title | slug | removeApostrophe }}/index.html"
+---
+
+<h3>The terminal</h3>
+<p>
+	Most developers and designers use the terminal everyday but it can be tough to
+	learn all the pre-written aliases that speed things up for you.
+</p>
+<p>
+	I'll go over some of the aliases and techniques I use to speed things up a bit
+	🚀
+</p>
+
+<section>
+	<h3>Assumptions</h3>
+	<p>
+		I'm on OSX and using
+		<a href="https://brew.sh/" target="_blank">Homebrew</a>,
+		<a href="https://ohmyz.sh/" target="_blank">ZSH</a> and
+		<a href="https://www.iterm2.com/" target="_blank">iTerm2</a> as my terminal.
+	</p>
+
+	<h4>Install Homebrew</h4>
+	{% highlight bash %} /usr/bin/ruby -e "$(curl -fsSL
+	https://raw.githubusercontent.com/Homebrew/install/master/install)" {%
+	endhighlight %}
+
+	<h4>Install iTerm2</h4>
+	{% highlight bash %} brew cask install iterm2 {% endhighlight %}
+
+	<h4>Install ZSH</h4>
+	{% highlight bash %} brew install zsh {% endhighlight %}
+</section>
+
+<h3>Out of the box</h3>
+<p>
+	Now that you have these three things installed, it is already easier to do a
+	lot of stuff
+</p>
+<h4>Homebrew</h4>
+<p>
+	As you saw above, installing applications is really simple with Homebrew. It's
+	also as easy to update and remove them.
+</p>
+<h4>ZSH</h4>
+<p>
+	Now that you're using ZSH, <code>auto_cd</code> will be enabled by default.
+</p>
+<p>
+	This means that instead of typing <code>cd mydir/anotherdir</code>, you can
+	omit the <code>cd</code> altogether.
+</p>
+<p>
+	Tab completion should also be set up so if you start typing a command or a
+	filepath, hit tab and options will be shown to autocomplete your command.
+</p>
+<h4>iTerm2 themes</h4>
+<p>You can customise iTerm2's themes so that they look pretty cool:</p>
+<img src="/assets/images/iterm2.png" alt="iTerm2 Theme" class="img-fluid" />
+<p>
+	Check out
+	<a href="https://gist.github.com/kevin-smets/8568070" target="_blank"
+		>this link</a
+	>
+	for instructions on how to style yours.
+</p>
+
+<h3>Aliases</h3>
+<p>
+	You may find yourself typing the same commands over and over again, maybe even
+	a sequence of commands.
+</p>
+<p>
+	Aliases allow you to write your string that will perform any given command.
+</p>
+
+<p>
+	Now that you're using ZSH, in your home directory (<code>cd ~</code>) there
+	will be a hidden file <code>.zshrc</code>.
+</p>
+
+<p>Open that file:</p>
+{% highlight bash %} open ~/.zshrc {% endhighlight %}
+
+<p>
+	In there you'll see a bunch of config code, most of it commented out. Have a
+	look through it to see if there's anything in there you'd like to enable.
+</p>
+<p>Once you're done, scroll right to the bottom and you'll see some aliases.</p>
+<p>You'll now be able to write your own aliases using the following syntax.</p>
+{% highlight bash %} alias myaliasname = "command(s)" {% endhighlight %}
+
+<p>My own <code>.zshrc</code> file looks like this:</p>
+
+{% highlight bash %} # Set personal aliases, overriding those provided by
+oh-my-zsh libs, # plugins, and themes. Aliases can be placed here, though
+oh-my-zsh # users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`. # # Example aliases # alias
+zshconfig="mate ~/.zshrc" # alias ohmyzsh="mate ~/.oh-my-zsh" alias installRun =
+"npm i && npm run dev" alias ls = "ls -a" alias share = "php -S
+'10.54.4.120:3000'" {% endhighlight %}
+
+<p>
+	You'll can see my <code>installRun</code> alias contains more than one command
+	that I've strung together using the <code>&&</code> operator.
+</p>
+
+<h3>Git</h3>
+<p>
+	I find the built in alias <code>gcam</code> particularly useful when commiting
+	files to my git repositories.
+</p>
+<p>It means that instead of writing:</p>
+
+{% highlight bash %} git add . git commit -m "My commit message" git push {%
+endhighlight %}
+<p>I can simply write:</p>
+{% highlight bash %} gcam "My commit message" && gp {% endhighlight %}
+
+<p>Some other useful built in aliases that speed up your git workflow:</p>
+{% highlight bash %} # Check the status of your working tree gst [git status] #
+Pull from origin gl [git pull] # Push to origin gp [git push] # Switch to branch
+gco
+<branchname>
+	[git checkout
+	<branchname
+		>] # Switch to new branch gcb branchname [git checkout -b
+		<branchname
+			>] # Push new branch and set origin to a new branch of the same name gpsup
+			[git push --set-upstream origin $(current_branch)] # Fetch origin gfo [git
+			fetch origin] # Stage all changes gaa [git add --all] # Commit with
+			message gcmsg "Your commit message" [git commit -m "Your commit message"]
+			# Stage and commit everything in your working tree gcam "Your message
+			here" [git add --all && cit commit -m "Your message here"] {% endhighlight
+			%}
+
+			<p>
+				The list of git aliases is huge so it's worth looking them up to decide
+				which are most useful to you.
+			</p>
+
+			<p>Have fun!</p>
+		</branchname></branchname
+	></branchname
+>

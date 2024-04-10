@@ -1,0 +1,77 @@
+---
+layout: layouts/article
+article_title: Style your JS console logs
+meta-description: If you're an absolute d**k like me then you might want to style your console logs for some silly developer points, here's how.
+excerpt: Here's how to style your console logs so that you too can look like a complete d**k
+image: console.log.gif
+tags: posts
+post_tags: [Javascript, Code, Console logs, Styling]
+permalink: "/blog/{{ article_title | slug | removeApostrophe }}/index.html"
+snippets: true
+---
+
+<h3>But why?</h3>
+<p>
+	Why might you want to style your logs? Well it could be an innocent reason
+	like Facebook (go have a look) or many companies who put a message there to
+	try to drum up some recruitment leads for their development team...
+</p>
+<p>
+	It could also be cos you're a <strong>dick</strong> that wants some extra
+	developer points. Like me 👀.
+</p>
+
+<h3>How?</h3>
+<p>
+	When writing your console log, your first argument (which is usually just the
+	text/variable you want to output) needs to contain "<code>%c</code>". For
+	example: <code>console.log("%c Hello world!")</code>.
+</p>
+
+<p>
+	The second argument, must be the CSS you want to use to stye your log. For
+	example: <code>console.log("%c Hello world!", "color: red;")</code>
+</p>
+
+<h4 class="mt-4">Full example:</h4>
+
+{% highlight javascript lineos %} console.log("%cHello world!", "background-color:#137886; color: white; padding: 5px; border-radius: 3px; font-family:verdana; font-weight:bold; margin: 20px;") {% endhighlight %}
+
+<figure class="mt-4">
+	<figcaption>
+		Your styled <code>console.log()</code> should now look like this:
+	</figcaption>
+	<img
+		src="/assets/images/log.png"
+		alt="Styled console.log"
+		class="img-fluid"
+	/>
+</figure>
+
+<p>
+	You can keep adding to that so that different parts of your log have different
+	styling but using more than one <code>%c</code> and more than one styling
+	parameter.
+</p>
+<p>
+	For example: <br />
+	<code
+		>console.log("%cText1 %cText2", "styles for text1", "styles for
+		text2")</code
+	>
+</p>
+
+<h4 class="mt-4">Full example:</h4>
+
+{% highlight javascript lineos %} console.log("%c( ͡° ͜ʖ ͡°) %c¯\\_(ツ)_/¯", "background-color:#137886; color: white; padding: 5px; border-radius: 3px; margin: 5px;", "background-color:#861340; color: white; padding: 5px; border-radius: 3px; margin: 5px;" ) {% endhighlight %}
+
+<figure class="mt-4">
+	<figcaption>Result:</figcaption>
+	<img
+		src="/assets/images/log2.png"
+		alt="Another styled console.log"
+		class="img-fluid"
+	/>
+</figure>
+
+<p>Have fun!</p>

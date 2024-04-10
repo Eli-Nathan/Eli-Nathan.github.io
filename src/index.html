@@ -1,8 +1,9 @@
 ---
 layout: layouts/default
 title: Elijah Nathan | Web design
-description: I am a freelance web designer and developer based here in Glasgow. Have a look at my portfolio and get in touch!
+description: I am a freelance software engineer based here in Glasgow. Have a look at my portfolio and get in touch!
 current: home
+tags: home
 ---
 
 <div class="intro-section">
@@ -16,7 +17,7 @@ current: home
 					<div class="col-sm-9 align-self-center me-intro__text">
 						<h1>I'm Eli,</h1>
 						<p>
-							A freelance web designer & developer <br />based here in Glasgow.
+							A freelance software engineer <br />based here in Glasgow.
 						</p>
 						<!-- Encoded link to stop spam -->
 						<script type="text/javascript">
@@ -46,7 +47,7 @@ current: home
 			</div>
 			<div class="about-me col-md-6 align-self-end align-items-end">
 				<p>
-					I’ve been building websites for around 4 years now after changing
+					I’ve been building websites and apps for around 8 years now after changing
 					career from being a chef in some of Scotland’s most high profile
 					establishments.
 				</p>
@@ -95,7 +96,7 @@ current: home
 			<div class="col-sm-12 home-pf__cards text-center">
 				<div class="row">
 					{% for work in collections.works limit:6 %} {% include
-					partials/home-pf.html %} {% endfor %}
+					"./partials/home-pf.html" %} {% endfor %}
 				</div>
 				<div class="col-sm-12 text-center">
 					<script type="text/javascript">
@@ -247,4 +248,4 @@ current: home
 	</div>
 </div>
 
-{% include partials/tech-stack.html %}
+{% include "./partials/tech-stack.html" %}

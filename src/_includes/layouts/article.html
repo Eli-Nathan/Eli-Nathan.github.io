@@ -1,103 +1,143 @@
 <!DOCTYPE html>
 <html lang="en-GB" class="no-js">
+	<head>
+		<meta charset="utf-8" />
+		{% if noindex %}
+		<meta name="robots" content="noindex" />
+		{% endif %}
 
-<head>
-	<meta charset="utf-8">
-  {% if noindex %}
-	  <meta name="robots" content="noindex">
-  {% endif %}
+		<title>{{ title }} | Eli Nathan</title>
 
-	<title>{{ title }} | Eli Nathan</title>
+		<meta
+			name="description"
+			content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}"
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<meta
+			name="google-site-verification"
+			content="Yu1Wu5yGnn9bd-FI_8YKvZR_y8cVnzSORhMwAtETy0s"
+		/>
+		<link rel="shortcut icon" href="/assets/images/favicon.ico" />
+		<link rel="amphtml" href="https://elisweb.co.uk/amp{{page.url}}" />
+		<link rel="canonical" href="https://elisweb.co.uk{{page.url}}" />
 
-	<meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
-	<meta name="viewport" content="width=device-width">
-	<meta name="google-site-verification" content="Yu1Wu5yGnn9bd-FI_8YKvZR_y8cVnzSORhMwAtETy0s" />
-	<link rel="shortcut icon" href="/assets/images/favicon.ico">                  
-	<link rel="amphtml" href="https://elisweb.co.uk/amp{{page.url}}">
-	<link rel="canonical" href="https://elisweb.co.uk{{page.url}}">
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
 
-	<!-- Font Awesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		{% include "./partials/google-analytics.html" %}
+		<!-- Bootstrap Icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+		/>
 
-	{% include partials/google-analytics.html %}
-	<link rel="stylesheet" href="/assets/stylesheets/styles.css">
+		<!-- Styles -->
+		<link rel="stylesheet" href="{{ '/css/main.css' | url }}" />
 
-	{% if snippets %}
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
-		<link rel="stylesheet" href="/assets/stylesheets/darcula-theme.css">
-	{% endif %}
+		{% if snippets %}
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.min.css"
+		/>
 
-	<!-- Facebook -->
-	<meta property="og:url" content="https://elisweb.co.uk/{{ page.url }}" />
-	<meta property="og:title" content="{{article_title }}" />
-	<meta property="og:description" content="{{excerpt }}" />
-	<meta property="og:image" content="https://elisweb.co.uk/assets/images/{{image }}" />
+		{% endif %}
 
-	<!-- Twitter Cards -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="@Twitter Name here" />
-	<meta name="twitter:url" content="https://elisweb.co.uk/{{ page.url }}" />
-	<meta name="twitter:title" content="{{ article_title }}" />
-	<meta name="twitter:description" content="{{ excerpt }}" />
-	<meta name="twitter:image" content="https://elisweb.co.uk/assets/images/{{ image }}" />
-</head>
+		<!-- Facebook -->
+		<meta property="og:url" content="https://elisweb.co.uk/{{ page.url }}" />
+		<meta property="og:title" content="{{ article_title }}" />
+		<meta property="og:description" content="{{ excerpt }}" />
+		<meta
+			property="og:image"
+			content="https://elisweb.co.uk/assets/images/{{ image }}"
+		/>
 
-<body>
-	{% include partials/google-analytics-fallback.html %}
+		<!-- Twitter Cards -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@Twitter Name here" />
+		<meta name="twitter:url" content="https://elisweb.co.uk/{{ page.url }}" />
+		<meta name="twitter:title" content="{{ article_title }}" />
+		<meta name="twitter:description" content="{{ excerpt }}" />
+		<meta
+			name="twitter:image"
+			content="https://elisweb.co.uk/assets/images/{{ image }}"
+		/>
+	</head>
 
-	{% include partials/header.html %}
+	<body>
+		{% include "./partials/google-analytics-fallback.html" %} {% include
+		"./partials/header.html" %}
 		<div class="container content-container">
-			<div class="row ">
+			<h1>Test</h1>
+			<div class="row">
 				<div class="col-md-8 offset-md-2">
 					<section>
 						<article class="article--post">
-		          <h1 class="article-title text-center">{{ article_title }}</h1>
+							<h1 class="article-title text-center">{{ article_title }}</h1>
 							<p class="text-center">
 								<!-- <i class="fa fa-calendar" aria-hidden="true"></i> &nbsp; {{ date | date: "%-d %B %Y" }} &nbsp; &nbsp; <i class="fa fa-tag" aria-hidden="true"></i> &nbsp; {{ tags | first | replace_first: '-', ' ' | capitalize }} -->
 							</p>
-		          <img src="/assets/images/{{ image }}" alt="Article featured image" class="img-fluid" />
+							<img
+								src="/assets/images/{{ image }}"
+								alt="Article featured image"
+								class="img-fluid"
+							/>
 							{{ content }}
 
 							<div class="all-tags mt-4">
 								<h5>Tags:</h5>
-								<p>{% for tag in tags %}
-										{% if forloop.last %}
-											{{ tag }}
-											{% else %}
-												{{ tag }},
-										{% endif %}
-									{% endfor %}</p>
+								<p>
+									{% for tag in post_tags %} {% if forloop.last %} {{ tag }} {%
+									else %} {{ tag }}, {% endif %} {% endfor %}
+								</p>
+							</div>
 						</article>
 					</section>
 				</div>
-		  </div>
+			</div>
 		</div>
 
 		<div class="sharer">
-		  <div class="container content-container">
-		  	<div class="row">
-		      <div class="col-xs-12 col-md-8 offset-md-2 bg-white sharer-card">
-		        <div class="row">
-		          <div class="col-sm-12">
-		            <h3>Share this post</h3>
-		          </div>
-		          <div class="col-sm-4">
-		            <a class="btn btn--facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//elisweb.co.uk{{ page.url }}" target="_blank">Facebook</a>
-		          </div>
-		          <div class="col-sm-4">
-		            <a class="btn btn--linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//elisweb.co.uk{{ page.url }}&title={{ article_title }}&summary=&source=" target="_blank">LinkedIn</a>
-		          </div>
-              <div class="col-sm-4">
-		            <a class="btn btn--twitter" href="https://twitter.com/home?status=http%3A//elisweb.co.uk{{ page.url }}" target="_blank">Twitter</a>
-		          </div>
-		        </div>
-		      </div>
-		    </div>
-		  </div>
+			<div class="container content-container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 offset-md-2 bg-white sharer-card">
+						<div class="row">
+							<div class="col-sm-12">
+								<h3>Share this post</h3>
+							</div>
+							<div class="col-sm-4">
+								<a
+									class="btn btn--facebook"
+									href="https://www.facebook.com/sharer/sharer.php?u=http%3A//elisweb.co.uk{{ page.url }}"
+									target="_blank"
+									>Facebook</a
+								>
+							</div>
+							<div class="col-sm-4">
+								<a
+									class="btn btn--linkedin"
+									href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//elisweb.co.uk{{ page.url }}&title={{ article_title }}&summary=&source="
+									target="_blank"
+									>LinkedIn</a
+								>
+							</div>
+							<div class="col-sm-4">
+								<a
+									class="btn btn--twitter"
+									href="https://twitter.com/home?status=http%3A//elisweb.co.uk{{ page.url }}"
+									target="_blank"
+									>Twitter</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		{% include partials/footer.html %}
-		{% include partials/scripts.html %}
-</body>
-
+		{% include "./partials/footer.html" %} {% include "./partials/scripts.html"
+		%}
+	</body>
 </html>

@@ -1,0 +1,46 @@
+@import "@webpixels/css/base";
+@import "@webpixels/css/forms";
+@import "@webpixels/css/components";
+@import "@webpixels/css/utilities";
+
+// Variables
+@import "_var.scss";
+// Main styles
+@import "_main.scss";
+// Nav & Footer
+@import "_navbar.scss";
+@import "_footer.scss";
+
+// Pages
+@import "_home.scss";
+@import "_blog.scss";
+@import "_cv.scss";
+@import "_cards.scss";
+
+.container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+@media (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		max-width: 961px;
+	}
+}

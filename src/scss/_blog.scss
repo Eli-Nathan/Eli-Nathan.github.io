@@ -1,0 +1,162 @@
+.blog-container {
+	padding-top: $spacer * 5;
+}
+
+.article {
+	&--post {
+		padding-top: $spacer * 2;
+		padding-bottom: $spacer;
+		@include media-breakpoint-up(sm) {
+			padding-top: $spacer * 3;
+			padding-bottom: $spacer;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			padding-bottom: $spacer * 1.5;
+		}
+
+		h1,
+		h2 {
+			text-transform: uppercase;
+			color: $red;
+		}
+
+		h1 {
+			font-size: 32px;
+		}
+
+		h2 {
+			font-size: 28px;
+		}
+
+		h3 {
+			font-size: 24px;
+			color: $red;
+			margin-top: $spacer * 2;
+		}
+
+		h4 {
+			font-size: 20px;
+		}
+
+		i.fa {
+			color: $green;
+		}
+
+		.image-captions {
+			h3 {
+				margin-top: $spacer * 2;
+			}
+
+			img {
+				margin-bottom: 0;
+				padding-bottom: $spacer * 0.5;
+			}
+
+			p {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.card {
+	color: $text;
+	text-decoration: none;
+	border-bottom-width: 2px;
+
+	&:hover {
+		text-decoration: none;
+		color: $text;
+	}
+
+	@include media-breakpoint-up(md) {
+		transition: 0.2s;
+
+		&:hover {
+			transform: scale(1.01);
+			box-shadow: 0 10px 20px rgba(#000, 0.1);
+		}
+	}
+
+	&__img {
+		border-radius: 3px;
+
+		img {
+			border-top-left-radius: 3px;
+			border-top-right-radius: 3px;
+		}
+	}
+
+	h2 {
+		@include media-breakpoint-up(sm) {
+			height: 76px;
+		}
+	}
+
+	p.excerpt {
+		@include media-breakpoint-up(sm) {
+			height: 72px;
+		}
+	}
+
+	&--home {
+		h2 {
+			@include media-breakpoint-up(sm) {
+				height: auto;
+			}
+
+			@include media-breakpoint-up(md) {
+				height: 120px;
+			}
+
+			@include media-breakpoint-up(lg) {
+				height: 80px;
+			}
+		}
+
+		p.excerpt {
+			@include media-breakpoint-up(sm) {
+				height: auto;
+			}
+
+			@include media-breakpoint-up(md) {
+				height: 120px;
+			}
+
+			@include media-breakpoint-up(lg) {
+				height: 100px;
+			}
+		}
+	}
+}
+
+.all-tags {
+	text-align: center;
+
+	p {
+		color: #979797;
+	}
+}
+
+.sharer-card {
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	padding: $spacer * 2;
+	margin-bottom: $spacer * 2;
+
+	h3 {
+		text-align: center;
+		padding-bottom: $spacer;
+	}
+
+	.btn {
+		width: 100%;
+		margin-bottom: $spacer;
+		@include media-breakpoint-up(sm) {
+			width: 100%;
+		}
+	}
+}

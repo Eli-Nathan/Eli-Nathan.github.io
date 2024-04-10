@@ -1,31 +1,62 @@
+const htmlmin = require("html-minifier");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(syntaxHighlight);
+function eleventyConfig(config) {
+	// Passthroughs
+	config.addPassthroughCopy("src/assets/**/*");
 
-  // Remove apostrophes
-  eleventyConfig.addFilter("removeApostrophe", function(str) {
-    return str.replace("'", "");
-  });
+	// Layout aliases
+	config.addLayoutAlias("base", "layouts/default.html");
+	config.addPlugin(syntaxHighlight);
 
-  // Ordinal date
-  eleventyConfig.addFilter("ordinal", function (date) {
-    let newDate = date + (date > 0 ? ['th', 'st', 'nd', 'rd'][(date > 3 && date < 21) || date % 10 > 3 ? 0 : date % 10] : '');
-    return newDate.replace(/^0+/, '')
-  });
+	// Remove apostrophes
+	config.addFilter("removeApostrophe", function (str) {
+		return str.replace("'", "");
+	});
 
-  return {
-    dir: {
-      input: "src/",
-      output: "docs",
-      includes: "_includes",
-      data: "_data"
-    },
-    templateFormats: ["html", "md", "liquid"],
-    htmlTemplateEngine: "liquid",
-    markdownTemplateEngine: "liquid",
+	// Ordinal date
+	config.addFilter("ordinal", function (date) {
+		let newDate =
+			date +
+			(date > 0
+				? ["th", "st", "nd", "rd"][
+						(date > 3 && date < 21) || date % 10 > 3 ? 0 : date % 10
+				  ]
+				: "");
+		return newDate.replace(/^0+/, "");
+	});
 
-    // 1.1 Enable elventy to pass dirs specified above
-    // passthroughFileCopy: true
-  };
-};
+	// Minify HTML
+	const isProduction = process.env.ELEVENTY_ENV === "production";
+
+	var htmlMinify = function (value, outputPath) {
+		if (outputPath && outputPath.indexOf(".html") > -1) {
+			return htmlmin.minify(value, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true,
+				minifyCSS: true,
+			});
+		}
+	};
+
+	// html min only in production
+	if (isProduction) {
+		config.addTransform("htmlmin", htmlMinify);
+	}
+
+	// Configuration
+	return {
+		dir: {
+			input: "src",
+			output: "docs",
+			includes: "_includes",
+			data: "_data",
+		},
+		templateFormats: ["html", "md", "liquid"],
+		htmlTemplateEngine: "liquid",
+		markdownTemplateEngine: "liquid",
+	};
+}
+
+module.exports = eleventyConfig;
