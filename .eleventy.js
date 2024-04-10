@@ -5,6 +5,7 @@ const {format} = require('date-fns/format')
 function eleventyConfig(config) {
 	// Passthroughs
 	config.addPassthroughCopy("src/assets/**/*");
+	config.addPassthroughCopy("src/robots.txt");
 
 	// Layout aliases
 	config.addLayoutAlias("base", "layouts/default.html");
