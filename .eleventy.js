@@ -1,5 +1,6 @@
 const htmlmin = require("html-minifier");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const {format} = require('date-fns/format')
 
 function eleventyConfig(config) {
 	// Passthroughs
@@ -53,7 +54,7 @@ function eleventyConfig(config) {
 			includes: "_includes",
 			data: "_data",
 		},
-		templateFormats: ["html", "md", "liquid"],
+		templateFormats: ["html", "md", "liquid", "njk"],
 		htmlTemplateEngine: "liquid",
 		markdownTemplateEngine: "liquid",
 	};
