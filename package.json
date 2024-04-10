@@ -17,7 +17,7 @@
         "build:css": "parcel build ./src/scss/main.scss --dist-dir ./docs/css",
         "build:js": "parcel build ./src/js/main.js --dist-dir ./docs/js",
         "build:images": "parcel build src/assets/img/*",
-        "clean": "rm -rf dist"
+        "clean": "rm -rf docs"
     },
     "repository": {
         "type": "git",
